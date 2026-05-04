@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Hibiscus Sway</title>
+  <desc id="desc">A hibiscus flower that sways smoothly in place.</desc>
+  <defs>
+    <linearGradient id="hbPetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8cb0" />
+      <stop offset="100%" stop-color="#e94881" />
+    </linearGradient>
+    <linearGradient id="hbStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#67bd69" />
+      <stop offset="100%" stop-color="#2f7b40" />
+    </linearGradient>
+    <filter id="hbGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.6" />
+    </filter>
+  </defs>
+  <style>
+    .stem-group {
+      transform-origin: 120px 228px;
+      animation: hbStemSway 4.9s ease-in-out infinite;
+    }
+
+    .flower {
+      transform-origin: 120px 98px;
+      animation: hbSway 4.3s ease-in-out infinite;
+    }
+    .stamen {
+      transform-origin: 120px 108px;
+      animation: hbStamen 4.3s ease-in-out infinite;
+    }
+
+    .halo {
+      animation: hbHalo 3s ease-in-out infinite;
+    }
+
+    @keyframes hbSway {
+      0%,
+      100% { transform: translateY(-22px) rotate(-3deg) scale(0.97); }
+      50% { transform: translateY(-22px) rotate(3deg) scale(1.03); }
+    }
+
+    @keyframes hbHalo {
+      0%,
+      100% { opacity: 0.34; }
+      50% { opacity: 0.7; }
+    }
+
+    @keyframes hbStemSway {
+      0%,
+      100% { transform: rotate(-2.2deg); }
+      50% { transform: rotate(2.2deg); }
+    }
+    @keyframes hbStamen {
+      0%,
+      100% { transform: rotate(-2deg); }
+      50% { transform: rotate(3deg); }
+    }
+  </style>
+
+  <ellipse class="halo" cx="120" cy="98" rx="68" ry="52" fill="#ffafc8" filter="url(#hbGlow)" />
+
+  <g class="stem-group">
+    <path d="M120 228 C112 191, 114 156, 120 133" stroke="url(#hbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 181 C91 170, 84 148, 103 139 C122 131, 133 153, 116 181 Z" fill="#4da15a" />
+    <path d="M124 166 C149 154, 159 132, 141 124 C123 117, 112 139, 124 166 Z" fill="#66bc6f" />
+  </g>
+
+  <g class="flower">
+    <ellipse cx="120" cy="74" rx="28" ry="35" fill="url(#hbPetal)" />
+    <ellipse cx="159" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(72 159 96)" />
+    <ellipse cx="146" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(144 146 132)" />
+    <ellipse cx="94" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(-144 94 132)" />
+    <ellipse cx="81" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(-72 81 96)" />
+    <ellipse cx="120" cy="108" rx="18" ry="16" fill="#ffd0dd" />
+    <circle cx="120" cy="108" r="6" fill="#f6b75f" />
+    <g class="stamen">
+      <path d="M120 108 C134 102, 148 96, 162 89" stroke="#f7dd8e" stroke-width="4" stroke-linecap="round" fill="none" />
+      <circle cx="140" cy="99" r="3.2" fill="#f7dd8e" />
+      <circle cx="151" cy="95" r="3.1" fill="#f7dd8e" />
+      <circle cx="162" cy="89" r="4" fill="#f4b24f" />
+    </g>
+  </g>
+</svg>

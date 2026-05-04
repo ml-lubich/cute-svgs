@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Rose Bloom</title>
+  <desc id="desc">A rose bloom opening gently on a stem.</desc>
+  <defs>
+    <linearGradient id="rStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69b86a" />
+      <stop offset="100%" stop-color="#2f7a3a" />
+    </linearGradient>
+    <linearGradient id="rPetalA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8fb2" />
+      <stop offset="100%" stop-color="#d83f70" />
+    </linearGradient>
+    <linearGradient id="rPetalB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f86795" />
+      <stop offset="100%" stop-color="#b92f5d" />
+    </linearGradient>
+  </defs>
+  <style>
+    .plant {
+      transform-origin: 120px 228px;
+      animation: roseSway 4.8s ease-in-out infinite;
+    }
+
+    .bud {
+      transform-origin: 120px 92px;
+      animation: roseOpen 3.4s ease-in-out infinite;
+    }
+
+    .inner-petal {
+      transform-origin: 120px 104px;
+      animation: roseInner 3.4s ease-in-out infinite;
+    }
+
+    @keyframes roseSway {
+      0%,
+      100% { transform: rotate(-1.9deg); }
+      50% { transform: rotate(2.4deg); }
+    }
+
+    @keyframes roseOpen {
+      0%,
+      100% { transform: scale(0.97) rotate(0deg); }
+      50% { transform: scale(1.04) rotate(-1deg); }
+    }
+
+    @keyframes roseInner {
+      0%,
+      100% { transform: scale(0.94); }
+      50% { transform: scale(1.07); }
+    }
+  </style>
+
+  <g class="plant">
+    <path d="M120 228 C111 186, 113 139, 120 106" stroke="url(#rStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 171 C92 160, 85 141, 103 134 C122 126, 132 147, 116 171 Z" fill="#55aa58" />
+    <path d="M124 156 C147 146, 157 127, 140 120 C123 113, 112 133, 124 156 Z" fill="#69bc6b" />
+
+    <g class="bud">
+      <path d="M120 78 C102 78, 89 94, 92 120 C101 130, 113 123, 120 112 C127 123, 139 130, 148 120 C151 94, 138 78, 120 78 Z" fill="url(#rPetalA)" />
+      <path d="M102 96 C96 84, 100 70, 120 67 C122 80, 114 92, 102 96 Z" fill="url(#rPetalB)" />
+      <path d="M138 96 C144 84, 140 70, 120 67 C118 80, 126 92, 138 96 Z" fill="url(#rPetalB)" />
+      <path class="inner-petal" d="M120 91 C111 93, 109 106, 116 112 C123 118, 131 108, 126 99 C124 95, 122 92, 120 91 Z" fill="#ffdbe8" />
+      <path d="M110 124 C116 129, 124 129, 130 124" stroke="#f8b3cc" stroke-width="2" fill="none" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

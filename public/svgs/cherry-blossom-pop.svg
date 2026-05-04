@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Cherry Blossom Pop</title>
+  <desc id="desc">A five-petal cherry blossom that matches the classic emoji style.</desc>
+  <defs>
+    <radialGradient id="cbCore" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff1f7" />
+      <stop offset="100%" stop-color="#f8a7c2" />
+    </radialGradient>
+    <linearGradient id="cbStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69c268" />
+      <stop offset="100%" stop-color="#2f7f40" />
+    </linearGradient>
+    <filter id="cbGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.8" />
+    </filter>
+  </defs>
+  <style>
+    .stem-group {
+      transform-origin: 120px 228px;
+      animation: cbStemSway 4.4s ease-in-out infinite;
+    }
+
+    .flower {
+      transform-origin: 120px 100px;
+      animation: cbPulse 3.2s ease-in-out infinite;
+    }
+
+    .halo {
+      animation: cbHalo 2.8s ease-in-out infinite;
+    }
+
+    @keyframes cbPulse {
+      0%,
+      100% { transform: translateY(-18px) scale(0.97); }
+      50% { transform: translateY(-18px) scale(1.05); }
+    }
+
+    @keyframes cbHalo {
+      0%,
+      100% { opacity: 0.3; }
+      50% { opacity: 0.62; }
+    }
+
+    @keyframes cbStemSway {
+      0%,
+      100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+  </style>
+
+  <ellipse class="halo" cx="120" cy="102" rx="62" ry="46" fill="#ffc7da" filter="url(#cbGlow)" />
+
+  <g class="stem-group">
+    <path d="M120 228 C113 189, 114 154, 120 132" stroke="url(#cbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 179 C91 168, 84 147, 102 138 C121 130, 132 151, 116 179 Z" fill="#4fa85d" />
+    <path d="M124 164 C149 152, 159 131, 141 123 C123 116, 112 137, 124 164 Z" fill="#67bd70" />
+  </g>
+
+  <g class="flower">
+    <path d="M120 75 C106 78, 98 90, 102 106 C111 110, 118 103, 120 95 C122 103, 129 110, 138 106 C142 90, 134 78, 120 75 Z" fill="#f7bdd2" />
+    <path d="M153 90 C141 83, 127 84, 117 95 C118 106, 128 109, 136 105 C141 113, 151 117, 159 112 C166 100, 163 92, 153 90 Z" fill="#f7bdd2" />
+    <path d="M146 125 C140 112, 128 106, 114 109 C109 119, 116 127, 124 130 C122 140, 126 149, 135 153 C148 149, 152 141, 146 125 Z" fill="#f7bdd2" />
+    <path d="M94 125 C88 141, 92 149, 105 153 C114 149, 118 140, 116 130 C124 127, 131 119, 126 109 C112 106, 100 112, 94 125 Z" fill="#f7bdd2" />
+    <path d="M87 90 C77 92, 74 100, 81 112 C89 117, 99 113, 104 105 C112 109, 122 106, 123 95 C113 84, 99 83, 87 90 Z" fill="#f7bdd2" />
+    <circle cx="120" cy="112" r="16" fill="url(#cbCore)" />
+    <circle cx="120" cy="112" r="5" fill="#f0a15c" />
+  </g>
+</svg>

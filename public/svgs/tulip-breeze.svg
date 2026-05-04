@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Tulip Breeze</title>
+  <desc id="desc">An upward tulip swaying in a light breeze.</desc>
+  <defs>
+    <linearGradient id="tStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69bc66" />
+      <stop offset="100%" stop-color="#2f8441" />
+    </linearGradient>
+    <linearGradient id="tPetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffbd7f" />
+      <stop offset="100%" stop-color="#f2664a" />
+    </linearGradient>
+    <linearGradient id="tPetalShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7865f" />
+      <stop offset="100%" stop-color="#d84f35" />
+    </linearGradient>
+  </defs>
+  <style>
+    .plant {
+      transform-origin: 120px 226px;
+      animation: tulipSway 4.6s ease-in-out infinite;
+    }
+
+    .bud {
+      transform-origin: 120px 116px;
+      animation: tulipNod 3.2s ease-in-out infinite;
+    }
+
+    .petal-left,
+    .petal-right {
+      transform-origin: 120px 116px;
+    }
+
+    .petal-left {
+      animation: tulipBreathLeft 3.2s ease-in-out infinite;
+    }
+
+    .petal-right {
+      animation: tulipBreathRight 3.2s ease-in-out infinite;
+    }
+
+    @keyframes tulipSway {
+      0%,
+      100% { transform: rotate(2.2deg); }
+      50% { transform: rotate(-2.8deg); }
+    }
+
+    @keyframes tulipNod {
+      0%,
+      100% { transform: rotate(0deg) scale(0.99); }
+      50% { transform: rotate(-1.2deg) scale(1.02); }
+    }
+
+    @keyframes tulipBreathLeft {
+      0%,
+      100% { transform: rotate(-7deg) scale(0.99); }
+      50% { transform: rotate(-9deg) scale(1.03); }
+    }
+
+    @keyframes tulipBreathRight {
+      0%,
+      100% { transform: rotate(7deg) scale(0.99); }
+      50% { transform: rotate(9deg) scale(1.03); }
+    }
+  </style>
+
+  <g class="plant">
+    <path d="M120 226 C111 190, 112 144, 121 107" stroke="url(#tStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 171 C92 160, 85 139, 103 131 C123 123, 133 145, 116 171 Z" fill="#56ae5b" />
+    <path d="M124 155 C149 143, 159 121, 140 114 C122 106, 110 129, 124 155 Z" fill="#70c871" />
+
+    <g class="bud">
+      <path class="petal-left" d="M120 118 C104 116, 91 101, 95 82 C107 79, 117 88, 120 103 Z" fill="url(#tPetal)" />
+      <path class="petal-right" d="M120 118 C136 116, 149 101, 145 82 C133 79, 123 88, 120 103 Z" fill="url(#tPetalShade)" />
+      <path d="M120 74 C107 78, 101 93, 106 112 C111 117, 116 119, 120 118 C124 119, 129 117, 134 112 C139 93, 133 78, 120 74 Z" fill="#ff8a5d" />
+      <path d="M120 92 C114 94, 111 103, 116 109 C121 114, 129 108, 126 100 C124 95, 122 93, 120 92 Z" fill="#ffd6b3" />
+    </g>
+  </g>
+</svg>

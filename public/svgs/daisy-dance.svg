@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Daisy Dance</title>
+  <desc id="desc">A white daisy spinning slowly with a bouncy center.</desc>
+  <defs>
+    <linearGradient id="ddStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cc66d" />
+      <stop offset="100%" stop-color="#2f8040" />
+    </linearGradient>
+    <filter id="ddGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.8" />
+    </filter>
+  </defs>
+  <style>
+    .stem-group {
+      transform-origin: 120px 228px;
+      animation: ddStemSway 4.6s ease-in-out infinite;
+    }
+
+    .petals {
+      transform-origin: 120px 120px;
+      animation: ddSpin 12s linear infinite;
+    }
+
+    .core {
+      transform-origin: 120px 120px;
+      animation: ddBounce 2.7s ease-in-out infinite;
+    }
+
+    .halo {
+      animation: ddHalo 3.1s ease-in-out infinite;
+    }
+
+    @keyframes ddSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes ddBounce {
+      0%,
+      100% { transform: scale(0.95); }
+      50% { transform: scale(1.08); }
+    }
+
+    @keyframes ddHalo {
+      0%,
+      100% { opacity: 0.3; }
+      50% { opacity: 0.62; }
+    }
+
+    @keyframes ddStemSway {
+      0%,
+      100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+  </style>
+
+  <ellipse class="halo" cx="120" cy="120" rx="66" ry="52" fill="#f5f3cf" filter="url(#ddGlow)" />
+
+  <g class="stem-group">
+    <path d="M120 228 C112 189, 114 154, 120 133" stroke="url(#ddStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 179 C91 168, 84 147, 103 138 C122 130, 133 152, 116 179 Z" fill="#4da45a" />
+    <path d="M124 164 C149 152, 159 131, 141 123 C123 116, 112 137, 124 164 Z" fill="#67be70" />
+  </g>
+
+  <g class="petals" fill="#fffef9">
+    <ellipse cx="120" cy="76" rx="13" ry="30" />
+    <ellipse cx="120" cy="164" rx="13" ry="30" />
+    <ellipse cx="76" cy="120" rx="30" ry="13" />
+    <ellipse cx="164" cy="120" rx="30" ry="13" />
+    <ellipse cx="89" cy="89" rx="12" ry="25" transform="rotate(-45 89 89)" />
+    <ellipse cx="151" cy="89" rx="12" ry="25" transform="rotate(45 151 89)" />
+    <ellipse cx="89" cy="151" rx="12" ry="25" transform="rotate(45 89 151)" />
+    <ellipse cx="151" cy="151" rx="12" ry="25" transform="rotate(-45 151 151)" />
+  </g>
+
+  <g class="core">
+    <circle cx="120" cy="120" r="20" fill="#ffc94f" />
+    <circle cx="120" cy="120" r="8" fill="#f5a93e" />
+  </g>
+</svg>
