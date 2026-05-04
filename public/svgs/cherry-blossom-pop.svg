@@ -1,68 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
   <title id="title">Cherry Blossom Pop</title>
-  <desc id="desc">A five-petal cherry blossom that matches the classic emoji style.</desc>
+  <desc id="desc">A soft pink cherry blossom in a classic five-petal emoji-inspired style.</desc>
   <defs>
+    <radialGradient id="cbPetal" cx="50%" cy="44%" r="70%">
+      <stop offset="0%" stop-color="#ffd8e8" />
+      <stop offset="100%" stop-color="#ee93b6" />
+    </radialGradient>
+    <radialGradient id="cbPetalInner" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffcbe0" />
+      <stop offset="100%" stop-color="#e781aa" />
+    </radialGradient>
     <radialGradient id="cbCore" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#fff1f7" />
-      <stop offset="100%" stop-color="#f8a7c2" />
+      <stop offset="0%" stop-color="#fff7fb" />
+      <stop offset="100%" stop-color="#f5abc6" />
     </radialGradient>
     <linearGradient id="cbStem" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#69c268" />
-      <stop offset="100%" stop-color="#2f7f40" />
+      <stop offset="0%" stop-color="#66bf68" />
+      <stop offset="100%" stop-color="#318348" />
     </linearGradient>
     <filter id="cbGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.8" />
+      <feGaussianBlur stdDeviation="3" />
     </filter>
   </defs>
   <style>
     .stem-group {
-      transform-origin: 120px 228px;
-      animation: cbStemSway 4.4s ease-in-out infinite;
+      transform-origin: 120px 226px;
+      animation: cbStemSway 4.5s ease-in-out infinite;
     }
 
-    .flower {
-      transform-origin: 120px 100px;
-      animation: cbPulse 3.2s ease-in-out infinite;
+    .blossom {
+      transform-origin: 120px 108px;
+      animation: cbPop 3s ease-in-out infinite;
     }
 
     .halo {
-      animation: cbHalo 2.8s ease-in-out infinite;
+      animation: cbHalo 3.1s ease-in-out infinite;
     }
 
-    @keyframes cbPulse {
+    @keyframes cbPop {
       0%,
-      100% { transform: translateY(-18px) scale(0.97); }
-      50% { transform: translateY(-18px) scale(1.05); }
+      100% { transform: translateY(-10px) scale(0.97); }
+      50% { transform: translateY(-10px) scale(1.05); }
     }
 
     @keyframes cbHalo {
       0%,
-      100% { opacity: 0.3; }
+      100% { opacity: 0.32; }
       50% { opacity: 0.62; }
     }
 
     @keyframes cbStemSway {
       0%,
-      100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
+      100% { transform: rotate(-1.8deg); }
+      50% { transform: rotate(1.8deg); }
     }
   </style>
 
-  <ellipse class="halo" cx="120" cy="102" rx="62" ry="46" fill="#ffc7da" filter="url(#cbGlow)" />
+  <ellipse class="halo" cx="120" cy="104" rx="66" ry="52" fill="#ffc9de" filter="url(#cbGlow)" />
 
   <g class="stem-group">
-    <path d="M120 228 C113 189, 114 154, 120 132" stroke="url(#cbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
-    <path d="M116 179 C91 168, 84 147, 102 138 C121 130, 132 151, 116 179 Z" fill="#4fa85d" />
-    <path d="M124 164 C149 152, 159 131, 141 123 C123 116, 112 137, 124 164 Z" fill="#67bd70" />
+    <path d="M120 226 C114 193, 114 162, 120 136" stroke="url(#cbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 181 C94 171, 88 153, 104 145 C121 138, 131 156, 116 181 Z" fill="#52ab5f" />
+    <path d="M124 168 C146 158, 154 141, 138 134 C122 127, 112 145, 124 168 Z" fill="#6bc276" />
   </g>
 
-  <g class="flower">
-    <path d="M120 75 C106 78, 98 90, 102 106 C111 110, 118 103, 120 95 C122 103, 129 110, 138 106 C142 90, 134 78, 120 75 Z" fill="#f7bdd2" />
-    <path d="M153 90 C141 83, 127 84, 117 95 C118 106, 128 109, 136 105 C141 113, 151 117, 159 112 C166 100, 163 92, 153 90 Z" fill="#f7bdd2" />
-    <path d="M146 125 C140 112, 128 106, 114 109 C109 119, 116 127, 124 130 C122 140, 126 149, 135 153 C148 149, 152 141, 146 125 Z" fill="#f7bdd2" />
-    <path d="M94 125 C88 141, 92 149, 105 153 C114 149, 118 140, 116 130 C124 127, 131 119, 126 109 C112 106, 100 112, 94 125 Z" fill="#f7bdd2" />
-    <path d="M87 90 C77 92, 74 100, 81 112 C89 117, 99 113, 104 105 C112 109, 122 106, 123 95 C113 84, 99 83, 87 90 Z" fill="#f7bdd2" />
-    <circle cx="120" cy="112" r="16" fill="url(#cbCore)" />
-    <circle cx="120" cy="112" r="5" fill="#f0a15c" />
+  <g class="blossom">
+    <path d="M120 68 C102 71, 90 88, 96 110 C107 116, 116 109, 120 99 C124 109, 133 116, 144 110 C150 88, 138 71, 120 68 Z" fill="url(#cbPetal)" />
+    <path d="M120 68 C102 71, 90 88, 96 110 C107 116, 116 109, 120 99 C124 109, 133 116, 144 110 C150 88, 138 71, 120 68 Z" fill="url(#cbPetal)" transform="rotate(72 120 108)" />
+    <path d="M120 68 C102 71, 90 88, 96 110 C107 116, 116 109, 120 99 C124 109, 133 116, 144 110 C150 88, 138 71, 120 68 Z" fill="url(#cbPetal)" transform="rotate(144 120 108)" />
+    <path d="M120 68 C102 71, 90 88, 96 110 C107 116, 116 109, 120 99 C124 109, 133 116, 144 110 C150 88, 138 71, 120 68 Z" fill="url(#cbPetal)" transform="rotate(216 120 108)" />
+    <path d="M120 68 C102 71, 90 88, 96 110 C107 116, 116 109, 120 99 C124 109, 133 116, 144 110 C150 88, 138 71, 120 68 Z" fill="url(#cbPetal)" transform="rotate(288 120 108)" />
+
+    <path d="M120 80 C108 82, 100 93, 104 108 C112 112, 118 108, 120 102 C122 108, 128 112, 136 108 C140 93, 132 82, 120 80 Z" fill="url(#cbPetalInner)" />
+    <path d="M120 80 C108 82, 100 93, 104 108 C112 112, 118 108, 120 102 C122 108, 128 112, 136 108 C140 93, 132 82, 120 80 Z" fill="url(#cbPetalInner)" transform="rotate(72 120 108)" />
+    <path d="M120 80 C108 82, 100 93, 104 108 C112 112, 118 108, 120 102 C122 108, 128 112, 136 108 C140 93, 132 82, 120 80 Z" fill="url(#cbPetalInner)" transform="rotate(144 120 108)" />
+    <path d="M120 80 C108 82, 100 93, 104 108 C112 112, 118 108, 120 102 C122 108, 128 112, 136 108 C140 93, 132 82, 120 80 Z" fill="url(#cbPetalInner)" transform="rotate(216 120 108)" />
+    <path d="M120 80 C108 82, 100 93, 104 108 C112 112, 118 108, 120 102 C122 108, 128 112, 136 108 C140 93, 132 82, 120 80 Z" fill="url(#cbPetalInner)" transform="rotate(288 120 108)" />
+
+    <circle cx="120" cy="108" r="16" fill="url(#cbCore)" />
+    <circle cx="120" cy="108" r="6" fill="#f0a15c" />
+    <circle cx="113" cy="105" r="1.2" fill="#f7bf83" />
+    <circle cx="127" cy="105" r="1.2" fill="#f7bf83" />
+    <circle cx="120" cy="114" r="1.2" fill="#f7bf83" />
   </g>
 </svg>
