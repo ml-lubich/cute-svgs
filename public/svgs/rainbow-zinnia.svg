@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Rainbow Zinnia</title>
+  <desc id="desc">A rainbow zinnia with layered petals slowly turning above a curved stem.</desc>
+  <defs>
+    <linearGradient id="rzStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6ee7b7"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+    <radialGradient id="rzCenter" cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#b45309"/></radialGradient>
+  </defs>
+  <style>
+    .rz-plant{transform-origin:120px 226px;animation:rzSway 4.8s ease-in-out infinite}.rz-head{transform-origin:120px 86px;animation:rzNod 3.4s ease-in-out infinite}.rz-ring{transform-origin:120px 86px;animation:rzSpin 20s linear infinite}.rz-ring.alt{animation-direction:reverse;animation-duration:24s}@keyframes rzSway{0%,100%{transform:rotate(-1.8deg)}50%{transform:rotate(2.4deg)}}@keyframes rzNod{0%,100%{transform:scale(.98)}50%{transform:scale(1.035) rotate(1.2deg)}}@keyframes rzSpin{to{transform:rotate(360deg)}}
+  </style>
+  <g class="rz-plant">
+    <path d="M120 226 C111 186 114 132 120 92" stroke="url(#rzStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M115 174 C90 164 82 144 101 136 C119 129 128 151 115 174 Z" fill="#22c55e"/>
+    <path d="M126 156 C151 146 160 125 142 118 C124 112 113 132 126 156 Z" fill="#65a30d"/>
+    <g class="rz-head">
+      <g class="rz-ring" opacity=".92">
+        <ellipse cx="120" cy="51" rx="11" ry="25" fill="#ef4444"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#f97316" transform="rotate(45 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#eab308" transform="rotate(90 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#22c55e" transform="rotate(135 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#06b6d4" transform="rotate(180 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#3b82f6" transform="rotate(225 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#8b5cf6" transform="rotate(270 120 86)"/><ellipse cx="120" cy="51" rx="11" ry="25" fill="#ec4899" transform="rotate(315 120 86)"/>
+      </g>
+      <g class="rz-ring alt" opacity=".86">
+        <ellipse cx="120" cy="58" rx="9" ry="21" fill="#fb7185" transform="rotate(22.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#fdba74" transform="rotate(67.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#bef264" transform="rotate(112.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#67e8f9" transform="rotate(157.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#93c5fd" transform="rotate(202.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#c4b5fd" transform="rotate(247.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#f9a8d4" transform="rotate(292.5 120 86)"/><ellipse cx="120" cy="58" rx="9" ry="21" fill="#fef08a" transform="rotate(337.5 120 86)"/>
+      </g>
+      <circle cx="120" cy="86" r="17" fill="url(#rzCenter)"/>
+      <circle cx="114" cy="81" r="2" fill="#fff7ad"/><circle cx="122" cy="78" r="2" fill="#fff7ad"/><circle cx="128" cy="86" r="2" fill="#fff7ad"/><circle cx="117" cy="91" r="2" fill="#fff7ad"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Forget-Me-Not Stars</title>
+  <desc id="desc">A small cluster of sky-blue forget-me-not flowers twinkling on thin stems.</desc>
+  <defs>
+    <linearGradient id="fnStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+  </defs>
+  <style>
+    .fn-plant{transform-origin:120px 228px;animation:fnSway 4.6s ease-in-out infinite}.fn-star{transform-origin:0 0;animation:fnTwinkle 3s ease-in-out infinite}.fn-star.two{animation-delay:-.7s}.fn-star.three{animation-delay:-1.4s}@keyframes fnSway{0%,100%{transform:rotate(-1.8deg)}50%{transform:rotate(2.2deg)}}@keyframes fnTwinkle{0%,100%{transform:scale(.94);opacity:.88}50%{transform:scale(1.08);opacity:1}}
+  </style>
+  <g class="fn-plant">
+    <path d="M120 228 C114 184 116 145 120 111" stroke="url(#fnStem)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M120 124 C105 107 92 96 76 88" stroke="url(#fnStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M122 119 C135 101 151 92 168 84" stroke="url(#fnStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M118 151 C101 145 89 131 92 116" stroke="url(#fnStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M115 184 C91 174 84 154 101 146 C119 138 128 159 115 184 Z" fill="#22c55e"/>
+    <path d="M126 164 C150 155 158 135 141 127 C123 119 113 141 126 164 Z" fill="#4ade80"/>
+    <g transform="translate(76 88)"><g class="fn-star"><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#93c5fd"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#60a5fa" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#93c5fd" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#60a5fa" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#93c5fd" transform="rotate(288)"/><circle r="5" fill="#fde047"/></g></g>
+    <g transform="translate(168 84)"><g class="fn-star two"><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#bfdbfe"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#60a5fa" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#bfdbfe" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#60a5fa" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#bfdbfe" transform="rotate(288)"/><circle r="5" fill="#fde047"/></g></g>
+    <g transform="translate(92 116)"><g class="fn-star three"><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#7dd3fc"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#3b82f6" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#7dd3fc" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#3b82f6" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7" ry="12" fill="#7dd3fc" transform="rotate(288)"/><circle r="5" fill="#fde047"/></g></g>
+  </g>
+</svg>

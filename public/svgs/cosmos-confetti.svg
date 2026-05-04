@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmos Confetti</title>
+  <desc id="desc">A pink cosmos with bright confetti dots sparkling around its petals.</desc>
+  <defs>
+    <linearGradient id="ccStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86efac"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+    <linearGradient id="ccPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf2f8"/><stop offset="100%" stop-color="#db2777"/></linearGradient>
+  </defs>
+  <style>
+    .cc-plant{transform-origin:120px 228px;animation:ccSway 4.7s ease-in-out infinite}.cc-head{transform-origin:120px 88px;animation:ccBloom 3.4s ease-in-out infinite}.cc-dot{animation:ccSpark 2.6s ease-in-out infinite}.cc-dot.alt{animation-delay:-1.3s}@keyframes ccSway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(2deg)}}@keyframes ccBloom{0%,100%{transform:scale(.98)}50%{transform:scale(1.04) rotate(-1deg)}}@keyframes ccSpark{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+  </style>
+  <g class="cc-plant">
+    <path d="M120 228 C116 184 113 139 120 101" stroke="url(#ccStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M114 176 C91 166 83 148 101 139 C120 131 128 151 114 176 Z" fill="#22c55e"/>
+    <path d="M126 158 C150 149 158 128 140 121 C122 114 113 135 126 158 Z" fill="#4ade80"/>
+    <g class="cc-head">
+      <g fill="url(#ccPetal)"><ellipse cx="120" cy="54" rx="14" ry="30"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(45 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(90 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(135 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(180 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(225 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(270 120 88)"/><ellipse cx="120" cy="54" rx="14" ry="30" transform="rotate(315 120 88)"/></g>
+      <circle cx="120" cy="88" r="15" fill="#facc15"/><circle cx="115" cy="85" r="2" fill="#854d0e"/><circle cx="123" cy="84" r="2" fill="#854d0e"/><circle cx="120" cy="93" r="2" fill="#854d0e"/>
+    </g>
+    <circle class="cc-dot" cx="77" cy="57" r="4" fill="#22d3ee"/><circle class="cc-dot alt" cx="165" cy="52" r="4" fill="#a3e635"/><circle class="cc-dot" cx="83" cy="116" r="3" fill="#f97316"/><circle class="cc-dot alt" cx="169" cy="114" r="3" fill="#8b5cf6"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Coral Orchid</title>
+  <desc id="desc">A coral orchid with butterfly-like petals floating on a curved stem.</desc>
+  <defs>
+    <linearGradient id="coStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <linearGradient id="coPetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fecdd3"/><stop offset="55%" stop-color="#fb7185"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
+  </defs>
+  <style>
+    .co-plant{transform-origin:120px 228px;animation:coSway 5.1s ease-in-out infinite}.co-bloom{transform-origin:120px 88px;animation:coFloat 3.7s ease-in-out infinite}@keyframes coSway{0%,100%{transform:rotate(1.5deg)}50%{transform:rotate(-2.4deg)}}@keyframes coFloat{0%,100%{transform:translateY(0) scale(.98)}50%{transform:translateY(-4px) scale(1.03)}}
+  </style>
+  <g class="co-plant">
+    <path d="M120 228 C108 186 115 140 128 105" stroke="url(#coStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M115 190 C87 184 76 163 94 153 C111 144 123 164 115 190 Z" fill="#22c55e"/>
+    <path d="M126 170 C155 162 166 139 148 130 C130 121 118 146 126 170 Z" fill="#4ade80"/>
+    <g class="co-bloom">
+      <ellipse cx="91" cy="84" rx="21" ry="32" fill="url(#coPetal)" transform="rotate(-35 91 84)"/>
+      <ellipse cx="149" cy="84" rx="21" ry="32" fill="url(#coPetal)" transform="rotate(35 149 84)"/>
+      <ellipse cx="120" cy="58" rx="18" ry="27" fill="#fda4af"/>
+      <ellipse cx="105" cy="109" rx="17" ry="25" fill="#fb7185" transform="rotate(34 105 109)"/>
+      <ellipse cx="135" cy="109" rx="17" ry="25" fill="#fb7185" transform="rotate(-34 135 109)"/>
+      <path d="M105 85 C116 75 130 76 138 88 C132 100 108 101 105 85 Z" fill="#fff7ed"/>
+      <path d="M112 88 C119 96 128 94 133 88" stroke="#be123c" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <circle cx="120" cy="87" r="5" fill="#f59e0b"/>
+    </g>
+  </g>
+</svg>

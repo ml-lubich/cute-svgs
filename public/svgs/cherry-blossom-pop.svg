@@ -2,9 +2,9 @@
   <title id="title">Cherry Blossom Pop</title>
   <desc id="desc">A soft pink cherry blossom in a classic five-petal emoji-inspired style.</desc>
   <defs>
-    <radialGradient id="cbPetal" cx="50%" cy="44%" r="70%">
-      <stop offset="0%" stop-color="#ffd8e8" />
-      <stop offset="100%" stop-color="#ee93b6" />
+    <radialGradient id="cbPetal" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#ffd4e8" />
+      <stop offset="100%" stop-color="#e8789e" />
     </radialGradient>
     <radialGradient id="cbPetalInner" cx="50%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#ffcbe0" />
@@ -47,8 +47,8 @@
 
     @keyframes cbPop {
       0%,
-      100% { transform: translateY(-10px) scale(0.97); }
-      50% { transform: translateY(-10px) scale(1.05); }
+      100% { transform: translateY(-22px) scale(0.97); }
+      50% { transform: translateY(-22px) scale(1.05); }
     }
 
     @keyframes cbStemSway {
@@ -72,27 +72,39 @@
     <path d="M120 226 C114 193, 114 162, 120 136" stroke="url(#cbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
     <path class="cb-leaf" d="M116 181 C94 171, 88 153, 104 145 C121 138, 131 156, 116 181 Z" fill="#52ab5f" transform="rotate(0 111 162)" />
     <path class="cb-leaf alt" d="M124 168 C146 158, 154 141, 138 134 C122 127, 112 145, 124 168 Z" fill="#6bc276" transform="rotate(0 127 149)" />
-  </g>
 
-  <g class="blossom">
-    <path d="M120 46 C92 50, 74 82, 84 116 C100 128, 116 118, 120 100 C124 118, 140 128, 156 116 C166 82, 148 50, 120 46 Z" fill="url(#cbPetal)" />
-    <path d="M120 46 C92 50, 74 82, 84 116 C100 128, 116 118, 120 100 C124 118, 140 128, 156 116 C166 82, 148 50, 120 46 Z" fill="url(#cbPetal)" transform="rotate(72 120 108)" />
-    <path d="M120 46 C92 50, 74 82, 84 116 C100 128, 116 118, 120 100 C124 118, 140 128, 156 116 C166 82, 148 50, 120 46 Z" fill="url(#cbPetal)" transform="rotate(144 120 108)" />
-    <path d="M120 46 C92 50, 74 82, 84 116 C100 128, 116 118, 120 100 C124 118, 140 128, 156 116 C166 82, 148 50, 120 46 Z" fill="url(#cbPetal)" transform="rotate(216 120 108)" />
-    <path d="M120 46 C92 50, 74 82, 84 116 C100 128, 116 118, 120 100 C124 118, 140 128, 156 116 C166 82, 148 50, 120 46 Z" fill="url(#cbPetal)" transform="rotate(288 120 108)" />
+    <g class="blossom">
+      <!-- 5 cherry blossom petals — wide fan with characteristic notch at outer tip -->
+      <path d="M120 108 C97 103,83 82,89 63 C93 51,107 44,113 49 C116 52,119 55,120 56 C121 55,124 52,127 49 C133 44,147 51,151 63 C157 82,143 103,120 108 Z" fill="url(#cbPetal)" />
+      <path d="M120 108 C97 103,83 82,89 63 C93 51,107 44,113 49 C116 52,119 55,120 56 C121 55,124 52,127 49 C133 44,147 51,151 63 C157 82,143 103,120 108 Z" fill="url(#cbPetal)" transform="rotate(72 120 108)" />
+      <path d="M120 108 C97 103,83 82,89 63 C93 51,107 44,113 49 C116 52,119 55,120 56 C121 55,124 52,127 49 C133 44,147 51,151 63 C157 82,143 103,120 108 Z" fill="url(#cbPetal)" transform="rotate(144 120 108)" />
+      <path d="M120 108 C97 103,83 82,89 63 C93 51,107 44,113 49 C116 52,119 55,120 56 C121 55,124 52,127 49 C133 44,147 51,151 63 C157 82,143 103,120 108 Z" fill="url(#cbPetal)" transform="rotate(216 120 108)" />
+      <path d="M120 108 C97 103,83 82,89 63 C93 51,107 44,113 49 C116 52,119 55,120 56 C121 55,124 52,127 49 C133 44,147 51,151 63 C157 82,143 103,120 108 Z" fill="url(#cbPetal)" transform="rotate(288 120 108)" />
 
-    <path d="M120 60 C102 64, 90 86, 96 112 C108 122, 117 115, 120 103 C123 115, 132 122, 144 112 C150 86, 138 64, 120 60 Z" fill="url(#cbPetalInner)" />
-    <path d="M120 60 C102 64, 90 86, 96 112 C108 122, 117 115, 120 103 C123 115, 132 122, 144 112 C150 86, 138 64, 120 60 Z" fill="url(#cbPetalInner)" transform="rotate(72 120 108)" />
-    <path d="M120 60 C102 64, 90 86, 96 112 C108 122, 117 115, 120 103 C123 115, 132 122, 144 112 C150 86, 138 64, 120 60 Z" fill="url(#cbPetalInner)" transform="rotate(144 120 108)" />
-    <path d="M120 60 C102 64, 90 86, 96 112 C108 122, 117 115, 120 103 C123 115, 132 122, 144 112 C150 86, 138 64, 120 60 Z" fill="url(#cbPetalInner)" transform="rotate(216 120 108)" />
-    <path d="M120 60 C102 64, 90 86, 96 112 C108 122, 117 115, 120 103 C123 115, 132 122, 144 112 C150 86, 138 64, 120 60 Z" fill="url(#cbPetalInner)" transform="rotate(288 120 108)" />
-
-    <g class="cb-stamen">
-      <circle cx="120" cy="108" r="16" fill="url(#cbCore)" />
-      <circle cx="120" cy="108" r="6" fill="#f0a15c" />
-      <circle cx="113" cy="105" r="1.2" fill="#f7bf83" />
-      <circle cx="127" cy="105" r="1.2" fill="#f7bf83" />
-      <circle cx="120" cy="114" r="1.2" fill="#f7bf83" />
+      <g class="cb-stamen">
+        <!-- Stamen lines; inner halves hidden by core circle drawn after -->
+        <line x1="120" y1="108" x2="120" y2="84" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="137" y2="91" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="144" y2="108" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="137" y2="125" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="120" y2="132" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="103" y2="125" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="96" y2="108" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <line x1="120" y1="108" x2="103" y2="91" stroke="#f0a15c" stroke-width="1.5" stroke-linecap="round" />
+        <!-- Core circle covers stamen bases -->
+        <circle cx="120" cy="108" r="13" fill="url(#cbCore)" />
+        <!-- Anther dots at stamen tips -->
+        <circle cx="120" cy="83" r="2.2" fill="#f7bf83" />
+        <circle cx="137" cy="90" r="2.2" fill="#f7bf83" />
+        <circle cx="145" cy="108" r="2.2" fill="#f7bf83" />
+        <circle cx="137" cy="126" r="2.2" fill="#f7bf83" />
+        <circle cx="120" cy="133" r="2.2" fill="#f7bf83" />
+        <circle cx="103" cy="126" r="2.2" fill="#f7bf83" />
+        <circle cx="95" cy="108" r="2.2" fill="#f7bf83" />
+        <circle cx="103" cy="90" r="2.2" fill="#f7bf83" />
+        <!-- Central pistil -->
+        <circle cx="120" cy="108" r="4" fill="#f0a15c" />
+      </g>
     </g>
   </g>
 </svg>

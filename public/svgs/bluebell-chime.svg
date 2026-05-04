@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Bluebell Chime</title>
+  <desc id="desc">Three bluebell blossoms bob gently from a teal arched stem.</desc>
+  <defs>
+    <linearGradient id="bbStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#047857"/></linearGradient>
+    <linearGradient id="bbBell" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bfdbfe"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+  </defs>
+  <style>
+    .bb-plant{transform-origin:120px 228px;animation:bbSway 5s ease-in-out infinite}.bb-bell{transform-box:fill-box;transform-origin:center top;animation:bbBob 3.2s ease-in-out infinite}.bb-bell.two{animation-delay:-.8s}.bb-bell.three{animation-delay:-1.6s}@keyframes bbSway{0%,100%{transform:rotate(2deg)}50%{transform:rotate(-2.2deg)}}@keyframes bbBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(5px) rotate(2deg)}}
+  </style>
+  <g class="bb-plant">
+    <path d="M120 228 C114 182 127 132 151 92" stroke="url(#bbStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M115 186 C88 181 77 161 94 151 C111 142 123 160 115 186 Z" fill="#10b981"/>
+    <path d="M127 167 C151 160 161 140 145 131 C128 123 117 144 127 167 Z" fill="#34d399"/>
+    <path d="M143 101 C126 105 113 117 105 134" stroke="url(#bbStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M151 91 C140 112 139 128 145 145" stroke="url(#bbStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M158 91 C167 110 170 127 165 145" stroke="url(#bbStem)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <g transform="translate(105 134)"><g class="bb-bell"><path d="M0 0 C-18 -6 -25 14 -14 30 C-5 43 15 39 20 24 C25 9 16 0 0 0 Z" fill="url(#bbBell)"/><path d="M-13 29 C-5 24 3 24 18 25" stroke="#dbeafe" stroke-width="3" stroke-linecap="round" fill="none"/></g></g>
+    <g transform="translate(145 145)"><g class="bb-bell two"><path d="M0 0 C-18 -6 -25 14 -14 30 C-5 43 15 39 20 24 C25 9 16 0 0 0 Z" fill="url(#bbBell)"/><path d="M-13 29 C-5 24 3 24 18 25" stroke="#dbeafe" stroke-width="3" stroke-linecap="round" fill="none"/></g></g>
+    <g transform="translate(165 145)"><g class="bb-bell three"><path d="M0 0 C-18 -6 -25 14 -14 30 C-5 43 15 39 20 24 C25 9 16 0 0 0 Z" fill="url(#bbBell)"/><path d="M-13 29 C-5 24 3 24 18 25" stroke="#dbeafe" stroke-width="3" stroke-linecap="round" fill="none"/></g></g>
+  </g>
+</svg>

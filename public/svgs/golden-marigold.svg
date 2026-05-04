@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Golden Marigold</title>
+  <desc id="desc">A ruffled marigold with orange and gold petals pulsing like a pom-pom.</desc>
+  <defs>
+    <linearGradient id="gmStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#84cc16"/><stop offset="100%" stop-color="#3f6212"/></linearGradient>
+    <radialGradient id="gmCore" cx="50%" cy="46%" r="58%"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#ea580c"/></radialGradient>
+  </defs>
+  <style>
+    .gm-plant{transform-origin:120px 226px;animation:gmSway 4.5s ease-in-out infinite}.gm-head{transform-origin:120px 89px;animation:gmPulse 3.1s ease-in-out infinite}.gm-frill{transform-origin:120px 89px;animation:gmTurn 18s linear infinite}@keyframes gmSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}@keyframes gmPulse{0%,100%{transform:scale(.96)}50%{transform:scale(1.05)}}@keyframes gmTurn{to{transform:rotate(360deg)}}
+  </style>
+  <g class="gm-plant">
+    <path d="M120 226 C126 183 118 139 120 103" stroke="url(#gmStem)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M116 177 C92 168 86 149 104 140 C123 132 132 153 116 177 Z" fill="#65a30d"/>
+    <path d="M126 158 C151 149 158 129 140 121 C123 114 112 135 126 158 Z" fill="#84cc16"/>
+    <g class="gm-head">
+      <g class="gm-frill" fill="#fb923c">
+        <ellipse cx="120" cy="56" rx="12" ry="25"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(30 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(60 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(90 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(120 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(150 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(180 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(210 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(240 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(270 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(300 120 89)"/><ellipse cx="120" cy="56" rx="12" ry="25" transform="rotate(330 120 89)"/>
+      </g>
+      <g fill="#facc15" opacity=".88"><ellipse cx="120" cy="64" rx="11" ry="21"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(45 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(90 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(135 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(180 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(225 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(270 120 89)"/><ellipse cx="120" cy="64" rx="11" ry="21" transform="rotate(315 120 89)"/></g>
+      <circle cx="120" cy="89" r="20" fill="url(#gmCore)"/>
+    </g>
+  </g>
+</svg>

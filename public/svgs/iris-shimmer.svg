@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Iris Shimmer</title>
+  <desc id="desc">A blue and gold iris with tall petals that shimmer as the stem sways.</desc>
+  <defs>
+    <linearGradient id="isStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7dd3fc"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <linearGradient id="isBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#3730a3"/></linearGradient>
+    <filter id="isGlow" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="2.8"/></filter>
+  </defs>
+  <style>
+    .is-plant{transform-origin:120px 228px;animation:isSway 4.9s ease-in-out infinite}.is-flower{transform-origin:120px 88px;animation:isNod 3.5s ease-in-out infinite}.is-glow{animation:isGlowPulse 2.9s ease-in-out infinite}@keyframes isSway{0%,100%{transform:rotate(1.7deg)}50%{transform:rotate(-2deg)}}@keyframes isNod{0%,100%{transform:scale(.98)}50%{transform:scale(1.035) rotate(1deg)}}@keyframes isGlowPulse{0%,100%{opacity:.18}50%{opacity:.5}}
+  </style>
+  <ellipse class="is-glow" cx="120" cy="88" rx="58" ry="54" fill="#93c5fd" filter="url(#isGlow)"/>
+  <g class="is-plant">
+    <path d="M120 228 C111 183 115 139 120 106" stroke="url(#isStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M115 190 C88 181 78 160 96 151 C113 143 123 164 115 190 Z" fill="#16a34a"/>
+    <path d="M126 170 C154 160 163 139 146 130 C128 122 118 146 126 170 Z" fill="#22c55e"/>
+    <g class="is-flower">
+      <ellipse cx="120" cy="56" rx="16" ry="34" fill="url(#isBlue)"/>
+      <ellipse cx="93" cy="88" rx="17" ry="31" fill="url(#isBlue)" transform="rotate(-46 93 88)"/>
+      <ellipse cx="147" cy="88" rx="17" ry="31" fill="url(#isBlue)" transform="rotate(46 147 88)"/>
+      <path d="M98 104 C106 86 116 84 120 103 C113 120 101 121 98 104 Z" fill="#facc15"/>
+      <path d="M142 104 C134 86 124 84 120 103 C127 120 139 121 142 104 Z" fill="#facc15"/>
+      <path d="M112 78 C116 89 124 89 128 78" stroke="#fef3c7" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <circle cx="120" cy="91" r="6" fill="#312e81"/>
+    </g>
+  </g>
+</svg>

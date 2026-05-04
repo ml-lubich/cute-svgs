@@ -1,76 +1,141 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="Animated green vine with blooming roses">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="evTitle evDesc">
+  <title id="evTitle">Rose Vine Twirl</title>
+  <desc id="evDesc">A green rose vine grows forward across the card with pink flowers opening along the top of the vine.</desc>
   <defs>
-    <linearGradient id="bg-wash" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="evBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#f2fff4"/>
       <stop offset="100%" stop-color="#e4fff0"/>
     </linearGradient>
-    <linearGradient id="vine-main" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#74d36f"/>
-      <stop offset="100%" stop-color="#1f7a3a"/>
+    <linearGradient id="evVineMain" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f7a3a"/>
+      <stop offset="56%" stop-color="#54bd5f"/>
+      <stop offset="100%" stop-color="#9be36f"/>
     </linearGradient>
-    <linearGradient id="vine-shadow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3b9f4a"/>
-      <stop offset="100%" stop-color="#1a5f30"/>
+    <linearGradient id="evVineShadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a5f30"/>
+      <stop offset="100%" stop-color="#3b9f4a"/>
     </linearGradient>
-    <radialGradient id="rose-outer" cx="45%" cy="40%" r="65%">
+    <radialGradient id="evRoseOuter" cx="45%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#ffafcd"/>
       <stop offset="100%" stop-color="#d83f7d"/>
     </radialGradient>
-    <radialGradient id="rose-inner" cx="50%" cy="45%" r="60%">
+    <radialGradient id="evRoseInner" cx="50%" cy="45%" r="60%">
       <stop offset="0%" stop-color="#ffe6f1"/>
       <stop offset="100%" stop-color="#ff7cb0"/>
     </radialGradient>
-    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <radialGradient id="evRoseHighlight" cx="48%" cy="38%" r="64%">
+      <stop offset="0%" stop-color="#fff7fb"/>
+      <stop offset="100%" stop-color="#ff9cc6"/>
+    </radialGradient>
+    <filter id="evSoftGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="4"/>
     </filter>
   </defs>
 
   <style>
-    .vine-wrap {
-      transform-origin: 160px 248px;
-      animation: vineSway 6.8s ease-in-out infinite;
+    .ev-vine {
+      transform-origin: 158px 152px;
+      animation: evSway 6.2s ease-in-out infinite;
     }
 
-    .leaf {
+    .ev-runner,
+    .ev-shadow {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: evGrow 4.8s ease-out infinite;
+    }
+
+    .ev-runner {
+      animation-delay: 0s;
+    }
+
+    .ev-shadow {
+      animation-delay: 0.08s;
+    }
+
+    .ev-leaf {
       transform-box: fill-box;
       transform-origin: center;
-      animation: leafFlutter 4.6s ease-in-out infinite;
+      animation: evLeafFlutter 4.6s ease-in-out infinite;
     }
 
-    .leaf.alt {
+    .ev-leaf.alt {
       animation-delay: -1.6s;
     }
 
-    .rose {
+    .ev-flower-stem {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: evGrow 4.8s ease-out infinite;
+    }
+
+    .ev-rose {
       transform-box: fill-box;
       transform-origin: center;
-      animation: roseBloom 3.6s ease-in-out infinite;
+      opacity: 0;
+      animation: evRoseBloom 4.8s ease-out infinite;
     }
 
-    .rose.slow {
-      animation-duration: 4.8s;
-      animation-delay: -1.2s;
+    .ev-rose.one,
+    .ev-stem-one {
+      animation-delay: 0.5s;
     }
 
-    .spark {
-      animation: sparkleLift 2.9s ease-in-out infinite;
+    .ev-rose.two,
+    .ev-stem-two {
+      animation-delay: 0.95s;
     }
 
-    .spark.alt {
+    .ev-rose.three,
+    .ev-stem-three {
+      animation-delay: 1.35s;
+    }
+
+    .ev-rose.four,
+    .ev-stem-four {
+      animation-delay: 1.8s;
+    }
+
+    .ev-rose.five,
+    .ev-stem-five {
+      animation-delay: 2.15s;
+    }
+
+    .ev-tip {
+      animation: evTip 2.4s ease-in-out infinite;
+    }
+
+    .ev-spark {
+      animation: evSparkleLift 2.9s ease-in-out infinite;
+    }
+
+    .ev-spark.alt {
       animation-delay: -1.3s;
     }
 
-    @keyframes vineSway {
-      0%,
-      100% {
-        transform: rotate(-2deg) translateX(-1px);
+    @keyframes evGrow {
+      0% {
+        stroke-dashoffset: 1;
+        opacity: 0.55;
       }
-      50% {
-        transform: rotate(2deg) translateX(2px);
+      42%,
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
       }
     }
 
-    @keyframes leafFlutter {
+    @keyframes evSway {
+      0%,
+      100% {
+        transform: rotate(-1.6deg) translateY(0);
+      }
+      50% {
+        transform: rotate(1.6deg) translateY(-2px);
+      }
+    }
+
+    @keyframes evLeafFlutter {
       0%,
       100% {
         transform: rotate(-5deg) scale(0.97);
@@ -80,17 +145,32 @@
       }
     }
 
-    @keyframes roseBloom {
-      0%,
-      100% {
-        transform: scale(0.94);
+    @keyframes evRoseBloom {
+      0%, 24% {
+        opacity: 0;
+        transform: scale(0.24) rotate(-9deg);
       }
-      50% {
-        transform: scale(1.08);
+      42% {
+        opacity: 1;
+        transform: scale(1.14) rotate(3deg);
+      }
+      62%, 100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
       }
     }
 
-    @keyframes sparkleLift {
+    @keyframes evTip {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(0.92);
+      }
+      50% {
+        transform: translate(7px, -4px) scale(1.08);
+      }
+    }
+
+    @keyframes evSparkleLift {
       0%,
       100% {
         opacity: 0.3;
@@ -103,60 +183,111 @@
     }
   </style>
 
-  <rect width="320" height="260" fill="url(#bg-wash)"/>
-  <ellipse cx="160" cy="244" rx="128" ry="16" fill="#a8d5aa" opacity="0.65"/>
-  <ellipse cx="160" cy="246" rx="110" ry="10" fill="#7abf89" opacity="0.5"/>
+  <rect width="320" height="260" fill="url(#evBg)"/>
+  <ellipse cx="160" cy="214" rx="126" ry="18" fill="#a8d5aa" opacity="0.6"/>
+  <ellipse cx="166" cy="216" rx="104" ry="10" fill="#7abf89" opacity="0.42"/>
 
-  <g class="spark">
-    <circle cx="70" cy="56" r="4" fill="#ffe8f3" filter="url(#soft-glow)"/>
+  <g class="ev-spark">
+    <circle cx="70" cy="56" r="4" fill="#ffe8f3" filter="url(#evSoftGlow)"/>
   </g>
-  <g class="spark alt">
-    <circle cx="264" cy="42" r="5" fill="#fff7d8" filter="url(#soft-glow)"/>
+  <g class="ev-spark alt">
+    <circle cx="264" cy="42" r="5" fill="#fff7d8" filter="url(#evSoftGlow)"/>
   </g>
 
-  <g class="vine-wrap">
-    <path d="M162 242 C149 210, 144 176, 161 149 C178 122, 206 106, 204 78 C202 55, 181 42, 168 24"
-      fill="none" stroke="url(#vine-main)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M160 242 C172 212, 181 183, 168 157 C154 130, 124 110, 122 82 C120 58, 141 43, 155 26"
-      fill="none" stroke="url(#vine-shadow)" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+  <g class="ev-vine">
+    <path class="ev-shadow" pathLength="1" d="M30 194 C66 164, 95 168, 126 146 C158 124, 184 114, 213 94 C241 74, 266 58, 300 48"
+      fill="none" stroke="url(#evVineShadow)" stroke-width="14" stroke-linecap="round" opacity="0.28"/>
+    <path class="ev-runner" pathLength="1" d="M28 188 C64 158, 96 162, 126 139 C158 115, 186 106, 214 86 C242 66, 267 50, 298 42"
+      fill="none" stroke="url(#evVineMain)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M28 188 C64 158, 96 162, 126 139 C158 115, 186 106, 214 86 C242 66, 267 50, 298 42"
+      fill="none" stroke="#0f5f2b" stroke-width="2" stroke-linecap="round" opacity="0.28"/>
 
-    <path class="leaf" d="M193 142 C219 129, 236 134, 238 150 C240 168, 219 177, 194 165 C186 158, 186 149, 193 142 Z"
-      fill="#5dc36b"/>
-    <path class="leaf alt" d="M133 123 C106 113, 87 120, 84 138 C81 155, 102 166, 128 155 C136 149, 138 132, 133 123 Z"
+    <path d="M54 170 C46 154, 39 145, 28 140" fill="none" stroke="#43a850" stroke-width="3" stroke-linecap="round"/>
+    <path d="M111 149 C104 132, 95 123, 82 118" fill="none" stroke="#43a850" stroke-width="3" stroke-linecap="round"/>
+    <path d="M172 111 C164 95, 153 87, 139 85" fill="none" stroke="#43a850" stroke-width="3" stroke-linecap="round"/>
+    <path d="M235 70 C246 58, 259 54, 275 58" fill="none" stroke="#43a850" stroke-width="3" stroke-linecap="round"/>
+
+    <path class="ev-flower-stem ev-stem-one" pathLength="1" d="M75 151 C74 139, 78 128, 88 118" fill="none" stroke="#2e8f42" stroke-width="4" stroke-linecap="round"/>
+    <path class="ev-flower-stem ev-stem-two" pathLength="1" d="M132 125 C131 112, 136 98, 148 88" fill="none" stroke="#2e8f42" stroke-width="4" stroke-linecap="round"/>
+    <path class="ev-flower-stem ev-stem-three" pathLength="1" d="M195 89 C197 76, 204 66, 216 58" fill="none" stroke="#2e8f42" stroke-width="4" stroke-linecap="round"/>
+    <path class="ev-flower-stem ev-stem-four" pathLength="1" d="M246 62 C250 50, 257 42, 268 35" fill="none" stroke="#2e8f42" stroke-width="4" stroke-linecap="round"/>
+    <path class="ev-flower-stem ev-stem-five" pathLength="1" d="M285 48 C289 37, 296 31, 306 26" fill="none" stroke="#2e8f42" stroke-width="3.5" stroke-linecap="round"/>
+
+    <path class="ev-leaf" d="M64 188 C41 195, 25 189, 23 174 C21 160, 39 152, 62 161 C70 168, 70 181, 64 188 Z"
       fill="#6ecf78"/>
-    <path class="leaf" d="M172 90 C197 80, 214 85, 216 100 C218 116, 199 124, 174 115 C167 108, 166 97, 172 90 Z"
+    <path class="ev-leaf alt" d="M104 147 C83 138, 74 123, 84 112 C94 101, 113 109, 119 132 C118 141, 112 146, 104 147 Z"
+      fill="#5dc36b"/>
+    <path class="ev-leaf" d="M152 126 C171 110, 190 108, 198 121 C206 135, 191 149, 164 145 C154 140, 150 133, 152 126 Z"
       fill="#79d881"/>
-    <path class="leaf alt" d="M149 69 C123 59, 106 66, 103 81 C100 96, 121 107, 146 98 C154 92, 156 77, 149 69 Z"
+    <path class="ev-leaf alt" d="M226 86 C208 77, 203 62, 214 53 C225 44, 241 53, 243 75 C241 83, 235 87, 226 86 Z"
       fill="#67c975"/>
+    <path class="ev-leaf" d="M268 62 C288 51, 305 55, 309 69 C313 83, 296 94, 272 85 C265 78, 264 69, 268 62 Z"
+      fill="#5dc36b"/>
 
-    <!-- Branch stub from main vine to rose 1 -->
-    <path d="M184 120 C193 116, 200 116, 204 121" fill="none" stroke="#4cb358" stroke-width="4" stroke-linecap="round"/>
-    <g class="rose" transform="translate(204 121)">
-      <circle r="18" fill="url(#rose-outer)"/>
-      <ellipse cx="0" cy="-6" rx="8" ry="12" fill="url(#rose-inner)"/>
-      <ellipse cx="-5" cy="-2" rx="8" ry="12" fill="url(#rose-inner)" transform="rotate(-34)"/>
-      <ellipse cx="5" cy="-2" rx="8" ry="12" fill="url(#rose-inner)" transform="rotate(34)"/>
-      <circle r="5" fill="#fff4fa"/>
+    <g transform="translate(88 118)">
+      <g class="ev-rose one">
+        <path d="M-14 11 C-8 18, 9 18, 15 11 C8 7, -7 7, -14 11 Z" fill="#23783a"/>
+        <circle r="17" fill="url(#evRoseOuter)"/>
+        <ellipse cx="0" cy="-6" rx="8" ry="11" fill="url(#evRoseHighlight)"/>
+        <ellipse cx="-6" cy="-2" rx="8" ry="12" fill="url(#evRoseInner)" transform="rotate(-34)"/>
+        <ellipse cx="6" cy="-2" rx="8" ry="12" fill="url(#evRoseInner)" transform="rotate(34)"/>
+        <ellipse cx="0" cy="5" rx="9" ry="7" fill="#e64b88"/>
+        <circle r="4" fill="#fff4fa"/>
+      </g>
     </g>
 
-    <!-- Branch stub from shadow vine to rose 2 -->
-    <path d="M133 108 C131 106, 130 104, 128 102" fill="none" stroke="#4cb358" stroke-width="3" stroke-linecap="round"/>
-    <g class="rose slow" transform="translate(128 102)">
-      <circle r="16" fill="url(#rose-outer)"/>
-      <ellipse cx="0" cy="-5" rx="7" ry="10" fill="url(#rose-inner)"/>
-      <ellipse cx="-4" cy="-2" rx="7" ry="10" fill="url(#rose-inner)" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-2" rx="7" ry="10" fill="url(#rose-inner)" transform="rotate(30)"/>
-      <circle r="4" fill="#fff4fa"/>
+    <g transform="translate(148 88)">
+      <g class="ev-rose two">
+        <path d="M-17 13 C-8 21, 10 21, 18 13 C9 8, -8 8, -17 13 Z" fill="#23783a"/>
+        <circle r="21" fill="url(#evRoseOuter)"/>
+        <ellipse cx="0" cy="-7" rx="10" ry="14" fill="url(#evRoseHighlight)"/>
+        <ellipse cx="-7" cy="-2" rx="10" ry="14" fill="url(#evRoseInner)" transform="rotate(-34)"/>
+        <ellipse cx="7" cy="-2" rx="10" ry="14" fill="url(#evRoseInner)" transform="rotate(34)"/>
+        <ellipse cx="0" cy="6" rx="11" ry="8" fill="#e64b88"/>
+        <circle r="5" fill="#fff4fa"/>
+      </g>
     </g>
 
-    <!-- Branch stub from main vine to rose 3 (moved onto vine) -->
-    <path d="M188 47 C181 46, 174 47, 163 50" fill="none" stroke="#4cb358" stroke-width="3" stroke-linecap="round"/>
-    <g class="rose" transform="translate(163 50)">
-      <circle r="14" fill="url(#rose-outer)"/>
-      <ellipse cx="0" cy="-4" rx="6" ry="8" fill="url(#rose-inner)"/>
-      <ellipse cx="-3.5" cy="-1.5" rx="6" ry="8" fill="url(#rose-inner)" transform="rotate(-32)"/>
-      <ellipse cx="3.5" cy="-1.5" rx="6" ry="8" fill="url(#rose-inner)" transform="rotate(32)"/>
-      <circle r="3.5" fill="#fff4fa"/>
+    <g transform="translate(216 58)">
+      <g class="ev-rose three">
+        <path d="M-15 12 C-7 19, 9 19, 16 12 C8 8, -7 8, -15 12 Z" fill="#23783a"/>
+        <circle r="18" fill="url(#evRoseOuter)"/>
+        <ellipse cx="0" cy="-6" rx="8" ry="12" fill="url(#evRoseHighlight)"/>
+        <ellipse cx="-6" cy="-2" rx="8" ry="12" fill="url(#evRoseInner)" transform="rotate(-30)"/>
+        <ellipse cx="6" cy="-2" rx="8" ry="12" fill="url(#evRoseInner)" transform="rotate(30)"/>
+        <ellipse cx="0" cy="5" rx="9" ry="7" fill="#e64b88"/>
+        <circle r="4" fill="#fff4fa"/>
+      </g>
+    </g>
+
+    <g transform="translate(268 35)">
+      <g class="ev-rose four">
+        <path d="M-13 10 C-6 16, 8 16, 14 10 C7 7, -6 7, -13 10 Z" fill="#23783a"/>
+        <circle r="16" fill="url(#evRoseOuter)"/>
+        <ellipse cx="0" cy="-5" rx="7" ry="10" fill="url(#evRoseHighlight)"/>
+        <ellipse cx="-5" cy="-2" rx="7" ry="10" fill="url(#evRoseInner)" transform="rotate(-32)"/>
+        <ellipse cx="5" cy="-2" rx="7" ry="10" fill="url(#evRoseInner)" transform="rotate(32)"/>
+        <ellipse cx="0" cy="5" rx="8" ry="6" fill="#e64b88"/>
+        <circle r="3.5" fill="#fff4fa"/>
+      </g>
+    </g>
+
+    <g transform="translate(306 26)">
+      <g class="ev-rose five">
+        <path d="M-10 8 C-5 13, 6 13, 11 8 C6 5, -5 5, -10 8 Z" fill="#23783a"/>
+        <circle r="12" fill="url(#evRoseOuter)"/>
+        <ellipse cx="0" cy="-4" rx="5" ry="7" fill="url(#evRoseHighlight)"/>
+        <ellipse cx="-4" cy="-1" rx="5" ry="7" fill="url(#evRoseInner)" transform="rotate(-32)"/>
+        <ellipse cx="4" cy="-1" rx="5" ry="7" fill="url(#evRoseInner)" transform="rotate(32)"/>
+        <circle r="3" fill="#fff4fa"/>
+      </g>
+    </g>
+
+    <g transform="translate(298 42)">
+      <g class="ev-tip">
+        <circle r="5" fill="#60c96b"/>
+        <path d="M0 0 C12 -8, 21 -7, 24 2" fill="none" stroke="#2e8f42" stroke-width="3" stroke-linecap="round"/>
+      </g>
     </g>
   </g>
 </svg>

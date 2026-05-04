@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Cactus Bloom</title>
+  <desc id="desc">A green cactus stem opens a hot-pink bloom with tiny animated sparkles.</desc>
+  <defs>
+    <linearGradient id="cbStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86efac"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <linearGradient id="cbPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f9a8d4"/><stop offset="100%" stop-color="#be185d"/></linearGradient>
+  </defs>
+  <style>
+    .cb-plant{transform-origin:120px 228px;animation:cbSway 5.2s ease-in-out infinite}.cb-flower{transform-origin:120px 83px;animation:cbOpen 3.2s ease-in-out infinite}.cb-spark{animation:cbSpark 2.4s ease-in-out infinite}.cb-spark.alt{animation-delay:-1.2s}@keyframes cbSway{0%,100%{transform:rotate(1deg)}50%{transform:rotate(-1.8deg)}}@keyframes cbOpen{0%,100%{transform:scale(.96)}50%{transform:scale(1.06)}}@keyframes cbSpark{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+  </style>
+  <g class="cb-plant">
+    <path d="M120 228 C112 190 113 140 120 96" stroke="url(#cbStem)" stroke-width="24" stroke-linecap="round" fill="none"/>
+    <path d="M104 178 C82 166 76 137 96 129 C111 123 119 145 112 170" stroke="url(#cbStem)" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M136 164 C161 151 166 122 145 114 C130 108 122 133 128 157" stroke="url(#cbStem)" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <g stroke="#dcfce7" stroke-width="2" stroke-linecap="round"><line x1="112" y1="134" x2="116" y2="134"/><line x1="124" y1="154" x2="128" y2="154"/><line x1="111" y1="188" x2="115" y2="188"/><line x1="93" y1="149" x2="97" y2="149"/><line x1="142" y1="134" x2="146" y2="134"/></g>
+    <g class="cb-flower">
+      <ellipse cx="120" cy="57" rx="13" ry="27" fill="url(#cbPetal)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="#ec4899" transform="rotate(45 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="url(#cbPetal)" transform="rotate(90 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="#ec4899" transform="rotate(135 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="url(#cbPetal)" transform="rotate(180 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="#ec4899" transform="rotate(225 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="url(#cbPetal)" transform="rotate(270 120 83)"/><ellipse cx="120" cy="57" rx="13" ry="27" fill="#ec4899" transform="rotate(315 120 83)"/>
+      <circle cx="120" cy="83" r="12" fill="#fef08a"/>
+    </g>
+    <circle class="cb-spark" cx="88" cy="67" r="3" fill="#fef08a"/><circle class="cb-spark alt" cx="154" cy="61" r="3" fill="#f0abfc"/>
+  </g>
+</svg>
