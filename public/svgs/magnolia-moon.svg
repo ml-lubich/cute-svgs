@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="mmTitle mmDesc">
+  <title id="mmTitle">Magnolia Moon</title>
+  <desc id="mmDesc">A creamy magnolia sways with broad moonlit petals.</desc>
+  <defs>
+    <linearGradient id="mmStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#84cc16"/><stop offset="100%" stop-color="#365314"/></linearGradient>
+    <linearGradient id="mmPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#fde68a"/></linearGradient>
+    <filter id="mmGlow" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="3.5"/></filter>
+  </defs>
+  <style>
+    .mm-plant{transform-origin:120px 228px;animation:mmSway 5.1s ease-in-out infinite}.mm-flower{transform-origin:120px 88px;animation:mmNod 3.7s ease-in-out infinite}.mm-halo{animation:mmHalo 3.7s ease-in-out infinite}@keyframes mmSway{0%,100%{transform:rotate(-1.3deg)}50%{transform:rotate(1.8deg)}}@keyframes mmNod{0%,100%{transform:scale(.98) rotate(0deg)}50%{transform:scale(1.03) rotate(-1.2deg)}}@keyframes mmHalo{0%,100%{opacity:.16}50%{opacity:.38}}
+  </style>
+  <ellipse class="mm-halo" cx="120" cy="88" rx="58" ry="48" fill="#fef3c7" filter="url(#mmGlow)"/>
+  <g class="mm-plant">
+    <path d="M120 228 C111 184 113 139 120 110" stroke="url(#mmStem)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M113 190 C84 181 75 158 95 149 C115 140 127 163 113 190 Z" fill="#4d7c0f"/>
+    <path d="M127 169 C158 160 166 135 146 128 C126 120 114 145 127 169 Z" fill="#65a30d"/>
+    <g class="mm-flower">
+      <g fill="url(#mmPetal)"><ellipse cx="120" cy="55" rx="19" ry="34"/><ellipse cx="96" cy="67" rx="18" ry="33" transform="rotate(-38 96 67)"/><ellipse cx="144" cy="67" rx="18" ry="33" transform="rotate(38 144 67)"/><ellipse cx="92" cy="101" rx="17" ry="31" transform="rotate(-76 92 101)"/><ellipse cx="148" cy="101" rx="17" ry="31" transform="rotate(76 148 101)"/><ellipse cx="120" cy="116" rx="17" ry="30" transform="rotate(180 120 116)"/></g>
+      <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round"><line x1="120" y1="88" x2="120" y2="70"/><line x1="120" y1="88" x2="112" y2="74"/><line x1="120" y1="88" x2="128" y2="74"/></g>
+      <circle cx="120" cy="88" r="8" fill="#f59e0b"/>
+    </g>
+  </g>
+</svg>

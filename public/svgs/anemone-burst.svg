@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="abTitle abDesc">
+  <title id="abTitle">Anemone Burst</title>
+  <desc id="abDesc">A violet anemone opens and glows around a dark dotted centre.</desc>
+  <defs>
+    <linearGradient id="abStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86efac"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <linearGradient id="abPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0abfc"/><stop offset="100%" stop-color="#7e22ce"/></linearGradient>
+    <filter id="abGlow" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="3.4"/></filter>
+  </defs>
+  <style>
+    .ab-plant{transform-origin:120px 228px;animation:abSway 4.9s ease-in-out infinite}.ab-head{transform-origin:120px 88px;animation:abBloom 3.5s ease-in-out infinite}.ab-halo{animation:abHalo 3.5s ease-in-out infinite}.ab-dot{animation:abTwinkle 2.4s ease-in-out infinite}.ab-dot.alt{animation-delay:-1.2s}@keyframes abSway{0%,100%{transform:rotate(-1.8deg)}50%{transform:rotate(2deg)}}@keyframes abBloom{0%,100%{transform:scale(.96) rotate(0deg)}50%{transform:scale(1.04) rotate(1deg)}}@keyframes abHalo{0%,100%{opacity:.18}50%{opacity:.42}}@keyframes abTwinkle{0%,100%{opacity:.45;transform:scale(.85)}50%{opacity:1;transform:scale(1.18)}}
+  </style>
+  <ellipse class="ab-halo" cx="120" cy="88" rx="58" ry="50" fill="#f5d0fe" filter="url(#abGlow)"/>
+  <g class="ab-plant">
+    <path d="M120 228 C116 184 112 139 120 105" stroke="url(#abStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M114 178 C90 170 82 150 101 141 C121 132 128 153 114 178 Z" fill="#22c55e"/>
+    <path d="M127 160 C151 151 160 130 142 122 C123 114 114 137 127 160 Z" fill="#4ade80"/>
+    <g class="ab-head">
+      <g fill="url(#abPetal)"><ellipse cx="120" cy="55" rx="16" ry="32"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(45 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(90 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(135 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(180 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(225 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(270 120 88)"/><ellipse cx="120" cy="55" rx="16" ry="32" transform="rotate(315 120 88)"/></g>
+      <circle cx="120" cy="88" r="17" fill="#2e1065"/><circle class="ab-dot" cx="114" cy="83" r="2.2" fill="#fde68a"/><circle class="ab-dot alt" cx="125" cy="83" r="2.2" fill="#fde68a"/><circle class="ab-dot" cx="112" cy="92" r="2.2" fill="#fde68a"/><circle class="ab-dot alt" cx="128" cy="92" r="2.2" fill="#fde68a"/><circle cx="120" cy="88" r="4" fill="#fef3c7"/>
+    </g>
+  </g>
+</svg>

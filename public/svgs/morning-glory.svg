@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="mgTitle mgDesc">
+  <title id="mgTitle">Morning Glory</title>
+  <desc id="mgDesc">A blue trumpet flower curls along a vine and opens toward the light.</desc>
+  <defs>
+    <linearGradient id="mgVine" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#86efac"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+    <radialGradient id="mgTrumpet" cx="50%" cy="48%" r="62%"><stop offset="0%" stop-color="#fff7ed"/><stop offset="38%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#2563eb"/></radialGradient>
+  </defs>
+  <style>
+    .mg-plant{transform-origin:120px 228px;animation:mgSway 5s ease-in-out infinite}.mg-head{transform-origin:120px 88px;animation:mgOpen 3.6s ease-in-out infinite}.mg-curl{stroke-dasharray:8 7;animation:mgCrawl 4s linear infinite}@keyframes mgSway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2deg)}}@keyframes mgOpen{0%,100%{transform:scale(.97) rotate(0deg)}50%{transform:scale(1.05) rotate(1deg)}}@keyframes mgCrawl{to{stroke-dashoffset:-30}}
+  </style>
+  <g class="mg-plant">
+    <path d="M120 228 C101 184 148 146 120 108" stroke="url(#mgVine)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path class="mg-curl" d="M125 171 C155 157 158 130 132 134 C109 138 113 160 134 157" stroke="#22c55e" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M110 184 C85 175 78 154 98 146 C118 139 126 160 110 184 Z" fill="#16a34a"/>
+    <path d="M132 151 C158 143 166 122 147 114 C128 107 119 130 132 151 Z" fill="#4ade80"/>
+    <g class="mg-head">
+      <path d="M120 116 C84 113 73 84 92 61 C109 40 132 40 149 61 C168 84 156 113 120 116 Z" fill="url(#mgTrumpet)"/>
+      <path d="M120 116 C111 99 111 80 120 58 C129 80 129 99 120 116 Z" fill="#bfdbfe" opacity=".55"/>
+      <circle cx="120" cy="89" r="13" fill="#fef3c7"/><circle cx="120" cy="89" r="5" fill="#f97316"/>
+    </g>
+  </g>
+</svg>

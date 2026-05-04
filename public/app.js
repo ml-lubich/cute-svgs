@@ -72,13 +72,13 @@ function buildRose(token) {
     <path d="M114 161 C91 149, 90 130, 112 126 C126 124,131 138,114 161" fill="#499a4b" transform="rotate(0 112 143)"/>
     <path d="M126 141 C149 129,153 110,132 105 C117 102,110 118,126 141" fill="#54aa55" transform="rotate(0 128 123)"/>
     <ellipse cx="120" cy="230" rx="43" ry="12" fill="#977051"/>
-  </g>
-  <g class="flower">
-    <circle cx="120" cy="76" r="20" fill="url(#petal-${token})"/>
-    <ellipse cx="103" cy="76" rx="16" ry="21" fill="url(#petal-${token})" transform="rotate(-30 103 76)"/>
-    <ellipse cx="137" cy="76" rx="16" ry="21" fill="url(#petal-${token})" transform="rotate(30 137 76)"/>
-    <ellipse cx="120" cy="58" rx="15" ry="12" fill="#ffc7d5"/>
-    <circle cx="120" cy="80" r="7" fill="#fff0f4"/>
+    <g class="flower">
+      <circle cx="120" cy="76" r="20" fill="url(#petal-${token})"/>
+      <ellipse cx="103" cy="76" rx="16" ry="21" fill="url(#petal-${token})" transform="rotate(-30 103 76)"/>
+      <ellipse cx="137" cy="76" rx="16" ry="21" fill="url(#petal-${token})" transform="rotate(30 137 76)"/>
+      <ellipse cx="120" cy="58" rx="15" ry="12" fill="#ffc7d5"/>
+      <circle cx="120" cy="80" r="7" fill="#fff0f4"/>
+    </g>
   </g>
 </svg>`
   };
@@ -260,3 +260,95 @@ if (generateButton && themeSelect) {
 }
 
 renderSvg("rose");
+
+const rotationToggle = document.querySelector("#rotation-toggle");
+const rotationStorageKey = "cute-svgs-rotation";
+const rotationAnimationPattern = /(?:spin|turn)/i;
+
+function getSavedRotationState() {
+  try {
+    return window.localStorage.getItem(rotationStorageKey);
+  } catch (error) {
+    console.warn(`Rotation preference could not be read. Cause: ${getErrorText(error)}`);
+    return null;
+  }
+}
+
+function saveRotationState(isEnabled) {
+  try {
+    window.localStorage.setItem(rotationStorageKey, isEnabled ? "on" : "off");
+  } catch (error) {
+    console.warn(`Rotation preference could not be saved. Cause: ${getErrorText(error)}`);
+  }
+}
+
+function getErrorText(error) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function setRotationEnabled(isEnabled) {
+  document.body.dataset.rotation = isEnabled ? "on" : "off";
+
+  if (rotationToggle instanceof HTMLInputElement) {
+    rotationToggle.checked = isEnabled;
+  }
+}
+
+function markRotatingElements(svg) {
+  const animatedElements = svg.querySelectorAll("*");
+
+  for (const element of animatedElements) {
+    const animationName = window.getComputedStyle(element).animationName;
+
+    if (rotationAnimationPattern.test(animationName)) {
+      element.classList.add("rotation-motion");
+    }
+  }
+}
+
+async function inlineSvgImage(image) {
+  const response = await fetch(image.currentSrc || image.src);
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status} while loading ${image.src}`);
+  }
+
+  const svgText = await response.text();
+  const documentParser = new DOMParser();
+  const svgDocument = documentParser.parseFromString(svgText, "image/svg+xml");
+  const parserError = svgDocument.querySelector("parsererror");
+  const svg = svgDocument.documentElement;
+
+  if (parserError || svg.tagName.toLowerCase() !== "svg") {
+    throw new Error(`Invalid SVG markup from ${image.src}`);
+  }
+
+  svg.classList.add("gallery-svg");
+  svg.removeAttribute("aria-labelledby");
+  svg.setAttribute("aria-label", image.alt);
+  image.classList.add("is-inline-fallback");
+  image.insertAdjacentElement("beforebegin", svg);
+  window.requestAnimationFrame(() => markRotatingElements(svg));
+}
+
+function enhanceGallerySvgs() {
+  const images = document.querySelectorAll('.gallery .card img[src$=".svg"]');
+
+  for (const image of images) {
+    inlineSvgImage(image).catch((error) => {
+      console.warn(`Inline SVG preview could not be prepared. Cause: ${getErrorText(error)}`);
+    });
+  }
+}
+
+const savedRotationState = getSavedRotationState();
+setRotationEnabled(savedRotationState !== "off");
+
+if (rotationToggle instanceof HTMLInputElement) {
+  rotationToggle.addEventListener("change", () => {
+    setRotationEnabled(rotationToggle.checked);
+    saveRotationState(rotationToggle.checked);
+  });
+}
+
+enhanceGallerySvgs();

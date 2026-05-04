@@ -62,22 +62,22 @@
     <path d="M120 228 C112 191, 114 150, 120 117" stroke="url(#hbStem)" stroke-width="8" stroke-linecap="round" fill="none" />
     <path class="hb-leaf" d="M116 181 C91 170, 84 148, 103 139 C122 131, 133 153, 116 181 Z" fill="#4da15a" transform="rotate(0 110 160)" />
     <path class="hb-leaf alt" d="M124 166 C149 154, 159 132, 141 124 C123 117, 112 139, 124 166 Z" fill="#66bc6f" transform="rotate(0 128 145)" />
-  </g>
 
-  <g class="flower">
-    <path d="M120 134 C108 126, 109 112, 120 104 C131 112, 132 126, 120 134 Z" fill="#61b768" />
-    <ellipse cx="120" cy="74" rx="28" ry="35" fill="url(#hbPetal)" />
-    <ellipse cx="159" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(72 159 96)" />
-    <ellipse cx="146" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(144 146 132)" />
-    <ellipse cx="94" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(-144 94 132)" />
-    <ellipse cx="81" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(-72 81 96)" />
-    <ellipse cx="120" cy="108" rx="18" ry="16" fill="#ffd0dd" />
-    <circle cx="120" cy="108" r="6" fill="#f6b75f" />
-    <g class="stamen">
-      <path d="M120 108 C134 102, 148 96, 162 89" stroke="#f7dd8e" stroke-width="4" stroke-linecap="round" fill="none" />
-      <circle cx="140" cy="99" r="3.2" fill="#f7dd8e" />
-      <circle cx="151" cy="95" r="3.1" fill="#f7dd8e" />
-      <circle cx="162" cy="89" r="4" fill="#f4b24f" />
+    <g class="flower">
+      <path d="M120 134 C108 126, 109 112, 120 104 C131 112, 132 126, 120 134 Z" fill="#61b768" />
+      <ellipse cx="120" cy="74" rx="28" ry="35" fill="url(#hbPetal)" />
+      <ellipse cx="159" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(72 159 96)" />
+      <ellipse cx="146" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(144 146 132)" />
+      <ellipse cx="94" cy="132" rx="28" ry="34" fill="url(#hbPetal)" transform="rotate(-144 94 132)" />
+      <ellipse cx="81" cy="96" rx="28" ry="35" fill="url(#hbPetal)" transform="rotate(-72 81 96)" />
+      <ellipse cx="120" cy="108" rx="18" ry="16" fill="#ffd0dd" />
+      <circle cx="120" cy="108" r="6" fill="#f6b75f" />
+      <g class="stamen">
+        <path d="M120 108 C134 102, 148 96, 162 89" stroke="#f7dd8e" stroke-width="4" stroke-linecap="round" fill="none" />
+        <circle cx="140" cy="99" r="3.2" fill="#f7dd8e" />
+        <circle cx="151" cy="95" r="3.1" fill="#f7dd8e" />
+        <circle cx="162" cy="89" r="4" fill="#f4b24f" />
+      </g>
     </g>
   </g>
 </svg>

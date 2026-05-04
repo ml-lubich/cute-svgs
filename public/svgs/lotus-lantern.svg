@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="llTitle llDesc">
+  <title id="llTitle">Lotus Lantern</title>
+  <desc id="llDesc">A lotus rises above a pond with a soft lantern-like glow.</desc>
+  <defs>
+    <linearGradient id="llStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#0f766e"/></linearGradient>
+    <linearGradient id="llPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff1f2"/><stop offset="100%" stop-color="#f472b6"/></linearGradient>
+    <filter id="llGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <style>
+    .ll-plant{transform-origin:120px 228px;animation:llSway 5.2s ease-in-out infinite}.ll-bloom{transform-origin:120px 98px;animation:llBloom 3.8s ease-in-out infinite}.ll-glow{animation:llGlowPulse 3.8s ease-in-out infinite}.ll-pad{animation:llFloat 4.6s ease-in-out infinite}@keyframes llSway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1.6deg)}}@keyframes llBloom{0%,100%{transform:scale(.97)}50%{transform:scale(1.04)}}@keyframes llGlowPulse{0%,100%{opacity:.2}50%{opacity:.5}}@keyframes llFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+  </style>
+  <ellipse class="ll-glow" cx="120" cy="96" rx="54" ry="44" fill="#fbcfe8" filter="url(#llGlow)"/>
+  <g class="ll-plant">
+    <path d="M120 228 C115 187 121 145 120 121" stroke="url(#llStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <ellipse class="ll-pad" cx="100" cy="219" rx="36" ry="12" fill="#0f766e" opacity=".85"/><ellipse class="ll-pad" cx="146" cy="226" rx="42" ry="13" fill="#14b8a6" opacity=".75"/>
+    <g class="ll-bloom">
+      <g fill="url(#llPetal)"><ellipse cx="120" cy="67" rx="13" ry="31"/><ellipse cx="99" cy="78" rx="13" ry="29" transform="rotate(-35 99 78)"/><ellipse cx="141" cy="78" rx="13" ry="29" transform="rotate(35 141 78)"/><ellipse cx="88" cy="99" rx="14" ry="30" transform="rotate(-67 88 99)"/><ellipse cx="152" cy="99" rx="14" ry="30" transform="rotate(67 152 99)"/></g>
+      <g fill="#f9a8d4"><ellipse cx="108" cy="95" rx="13" ry="25" transform="rotate(-22 108 95)"/><ellipse cx="132" cy="95" rx="13" ry="25" transform="rotate(22 132 95)"/><ellipse cx="120" cy="91" rx="12" ry="28"/></g>
+      <circle cx="120" cy="103" r="11" fill="#facc15"/><circle cx="116" cy="101" r="2" fill="#854d0e"/><circle cx="124" cy="101" r="2" fill="#854d0e"/><circle cx="120" cy="108" r="2" fill="#854d0e"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="csTitle csDesc">
+  <title id="csTitle">Camellia Spiral</title>
+  <desc id="csDesc">A coral camellia breathes with layered spiral petals.</desc>
+  <defs>
+    <linearGradient id="csStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#74d477"/><stop offset="100%" stop-color="#216e39"/></linearGradient>
+    <linearGradient id="csPetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fecaca"/><stop offset="100%" stop-color="#dc2626"/></linearGradient>
+    <linearGradient id="csInner" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff1f2"/><stop offset="100%" stop-color="#fb7185"/></linearGradient>
+  </defs>
+  <style>
+    .cs-plant{transform-origin:120px 228px;animation:csSway 5s ease-in-out infinite}.cs-outer{transform-origin:120px 90px;animation:csOuter 4s ease-in-out infinite}.cs-inner{transform-origin:120px 90px;animation:csInner 4s ease-in-out infinite}@keyframes csSway{0%,100%{transform:rotate(-1.7deg)}50%{transform:rotate(1.9deg)}}@keyframes csOuter{0%,100%{transform:scale(.98) rotate(0deg)}50%{transform:scale(1.03) rotate(2deg)}}@keyframes csInner{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.05) rotate(-3deg)}}
+  </style>
+  <g class="cs-plant">
+    <path d="M120 228 C116 185 113 139 120 108" stroke="url(#csStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M113 181 C88 172 80 151 100 142 C119 134 128 156 113 181 Z" fill="#16a34a"/>
+    <path d="M127 162 C153 153 161 131 142 124 C123 117 114 140 127 162 Z" fill="#4ade80"/>
+    <g class="cs-outer" fill="url(#csPetal)"><ellipse cx="120" cy="54" rx="15" ry="31"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(40 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(80 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(120 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(160 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(200 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(240 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(280 120 90)"/><ellipse cx="120" cy="54" rx="15" ry="31" transform="rotate(320 120 90)"/></g>
+    <g class="cs-inner" fill="url(#csInner)"><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(20 120 90)"/><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(80 120 90)"/><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(140 120 90)"/><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(200 120 90)"/><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(260 120 90)"/><ellipse cx="120" cy="66" rx="12" ry="23" transform="rotate(320 120 90)"/></g>
+    <circle cx="120" cy="90" r="11" fill="#fbbf24"/><circle cx="116" cy="88" r="2" fill="#7f1d1d"/><circle cx="124" cy="88" r="2" fill="#7f1d1d"/><circle cx="120" cy="95" r="2" fill="#7f1d1d"/>
+  </g>
+</svg>

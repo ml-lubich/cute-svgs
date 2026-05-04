@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="ddTitle ddDesc">
+  <title id="ddTitle">Dahlia Dream</title>
+  <desc id="ddDesc">A many-pointed dahlia slowly rotates with sunset colored petals.</desc>
+  <defs>
+    <linearGradient id="ddStem" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86efac"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+    <linearGradient id="ddOuter" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fed7aa"/><stop offset="100%" stop-color="#ea580c"/></linearGradient>
+    <linearGradient id="ddInner" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+  </defs>
+  <style>
+    .dd-plant{transform-origin:120px 228px;animation:ddSway 4.8s ease-in-out infinite}.dd-outer{transform-origin:120px 90px;animation:ddSpin 24s linear infinite}.dd-inner{transform-origin:120px 90px;animation:ddPulse 3.8s ease-in-out infinite}@keyframes ddSway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2.1deg)}}@keyframes ddSpin{to{transform:rotate(360deg)}}@keyframes ddPulse{0%,100%{transform:scale(.98) rotate(0deg)}50%{transform:scale(1.05) rotate(-4deg)}}
+  </style>
+  <g class="dd-plant">
+    <path d="M120 228 C119 184 114 140 120 111" stroke="url(#ddStem)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M114 184 C91 174 82 154 101 146 C120 138 128 160 114 184 Z" fill="#22c55e"/>
+    <path d="M126 166 C151 157 159 136 141 129 C123 121 114 144 126 166 Z" fill="#65a30d"/>
+    <g class="dd-outer" fill="url(#ddOuter)"><ellipse cx="120" cy="54" rx="9" ry="34"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(30 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(60 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(90 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(120 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(150 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(180 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(210 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(240 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(270 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(300 120 90)"/><ellipse cx="120" cy="54" rx="9" ry="34" transform="rotate(330 120 90)"/></g>
+    <g class="dd-inner" fill="url(#ddInner)"><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(15 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(60 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(105 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(150 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(195 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(240 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(285 120 90)"/><ellipse cx="120" cy="65" rx="8" ry="24" transform="rotate(330 120 90)"/></g>
+    <circle cx="120" cy="90" r="10" fill="#78350f"/><circle cx="120" cy="90" r="5" fill="#facc15"/>
+  </g>
+</svg>
