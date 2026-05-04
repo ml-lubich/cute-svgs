@@ -18,18 +18,28 @@
     }
 
     .head {
-      transform-origin: 120px 98px;
+      transform-origin: 120px 73px;
       animation: sunflowerNod 3.6s ease-in-out infinite;
     }
 
     .petals-back {
-      transform-origin: 120px 98px;
+      transform-origin: 120px 73px;
       animation: petalTurn 10s linear infinite;
     }
 
     .petals-front {
-      transform-origin: 120px 98px;
+      transform-origin: 120px 73px;
       animation: petalTurnReverse 12s linear infinite;
+    }
+
+    .sf-leaf {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sfLeafFlutter 4.5s ease-in-out infinite;
+    }
+
+    .sf-leaf.alt {
+      animation-delay: -2.25s;
     }
 
     @keyframes sunflowerSway {
@@ -53,53 +63,58 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(-360deg); }
     }
+
+    @keyframes sfLeafFlutter {
+      0%, 100% { transform: rotate(-6deg) scale(0.97); }
+      50% { transform: rotate(6deg) scale(1.05); }
+    }
   </style>
 
   <g class="plant">
-    <path d="M120 224 C111 183, 112 138, 120 101" stroke="url(#sfStem)" stroke-width="7" stroke-linecap="round" fill="none" />
-    <path d="M116 173 C93 161, 86 142, 104 134 C123 126, 133 147, 116 173" fill="#4caf58" />
-    <path d="M124 156 C147 145, 157 125, 140 118 C122 111, 111 132, 124 156" fill="#66cd6f" />
+    <path d="M120 224 C111 183, 112 138, 120 76" stroke="url(#sfStem)" stroke-width="7" stroke-linecap="round" fill="none" />
+    <path class="sf-leaf" d="M116 173 C93 161, 86 142, 104 134 C123 126, 133 147, 116 173" fill="#4caf58" transform="rotate(0 111 154)" />
+    <path class="sf-leaf alt" d="M124 156 C147 145, 157 125, 140 118 C122 111, 111 132, 124 156" fill="#66cd6f" transform="rotate(0 127 138)" />
 
     <g class="head">
       <g class="petals-back" fill="#f5bb2f">
-        <ellipse cx="120" cy="64" rx="11" ry="23" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(30 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(60 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(90 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(120 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(150 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(180 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(210 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(240 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(270 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(300 120 98)" />
-        <ellipse cx="120" cy="64" rx="11" ry="23" transform="rotate(330 120 98)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(30 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(60 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(90 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(120 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(150 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(180 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(210 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(240 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(270 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(300 120 73)" />
+        <ellipse cx="120" cy="39" rx="11" ry="23" transform="rotate(330 120 73)" />
       </g>
       <g class="petals-front" fill="#ffd95e">
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(15 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(45 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(75 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(105 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(135 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(165 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(195 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(225 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(255 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(285 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(315 120 98)" />
-        <ellipse cx="120" cy="68" rx="9" ry="20" transform="rotate(345 120 98)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(15 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(45 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(75 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(105 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(135 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(165 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(195 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(225 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(255 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(285 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(315 120 73)" />
+        <ellipse cx="120" cy="43" rx="9" ry="20" transform="rotate(345 120 73)" />
       </g>
-      <circle cx="120" cy="98" r="21" fill="url(#sfCenter)" />
-      <circle cx="112" cy="92" r="1.8" fill="#c9964f" />
-      <circle cx="120" cy="90" r="1.9" fill="#c9964f" />
-      <circle cx="128" cy="92" r="1.8" fill="#c9964f" />
-      <circle cx="108" cy="99" r="1.8" fill="#c9964f" />
-      <circle cx="116" cy="101" r="1.9" fill="#c9964f" />
-      <circle cx="124" cy="101" r="1.9" fill="#c9964f" />
-      <circle cx="132" cy="99" r="1.8" fill="#c9964f" />
-      <circle cx="112" cy="107" r="1.8" fill="#c9964f" />
-      <circle cx="120" cy="108" r="1.9" fill="#c9964f" />
-      <circle cx="128" cy="107" r="1.8" fill="#c9964f" />
+      <circle cx="120" cy="73" r="21" fill="url(#sfCenter)" />
+      <circle cx="112" cy="67" r="1.8" fill="#c9964f" />
+      <circle cx="120" cy="65" r="1.9" fill="#c9964f" />
+      <circle cx="128" cy="67" r="1.8" fill="#c9964f" />
+      <circle cx="108" cy="74" r="1.8" fill="#c9964f" />
+      <circle cx="116" cy="76" r="1.9" fill="#c9964f" />
+      <circle cx="124" cy="76" r="1.9" fill="#c9964f" />
+      <circle cx="132" cy="74" r="1.8" fill="#c9964f" />
+      <circle cx="112" cy="82" r="1.8" fill="#c9964f" />
+      <circle cx="120" cy="83" r="1.9" fill="#c9964f" />
+      <circle cx="128" cy="82" r="1.8" fill="#c9964f" />
     </g>
   </g>
 </svg>

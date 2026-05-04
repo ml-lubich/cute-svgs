@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Peony Puff</title>
+  <desc id="desc">A lush many-petalled peony breathing open on a stem.</desc>
+  <defs>
+    <linearGradient id="pyStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cc66d" />
+      <stop offset="100%" stop-color="#2f8040" />
+    </linearGradient>
+    <filter id="pyGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" />
+    </filter>
+  </defs>
+  <style>
+    .py-plant { transform-origin: 120px 228px; animation: pySway 4.6s ease-in-out infinite; }
+    .py-outer { transform-origin: 120px 88px;  animation: pyOuter 3.8s ease-in-out infinite; }
+    .py-inner { transform-origin: 120px 88px;  animation: pyInner 3.8s ease-in-out infinite; }
+    .py-halo  { animation: pyHalo 3.8s ease-in-out infinite; }
+
+    @keyframes pySway  { 0%,100%{ transform: rotate(-2.2deg); } 50%{ transform: rotate(2.4deg); } }
+    @keyframes pyOuter { 0%,100%{ transform: scale(0.95) rotate(0deg); }   50%{ transform: scale(1.06) rotate(4deg); } }
+    @keyframes pyInner { 0%,100%{ transform: scale(0.97) rotate(0deg); }   50%{ transform: scale(1.05) rotate(-4deg); } }
+    @keyframes pyHalo  { 0%,100%{ opacity: 0.2; } 50%{ opacity: 0.45; } }
+  </style>
+
+  <ellipse class="py-halo" cx="120" cy="88" rx="68" ry="58" fill="#f9a8d4" filter="url(#pyGlow)" />
+
+  <g class="py-plant">
+    <path d="M120 228 C112 192, 113 148, 120 116" stroke="url(#pyStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 180 C91 169, 84 148, 103 140 C122 132, 132 154, 116 180 Z" fill="#4da45a" />
+    <path d="M124 163 C149 152, 159 131, 141 124 C123 117, 112 138, 124 163 Z" fill="#67be70" />
+
+    <g class="py-outer">
+      <!-- Outer ring: 8 petals, light pink, centre=(120,88), petal-centre at cy=54 (dist=34) -->
+      <g fill="#fbcfe8">
+        <ellipse cx="120" cy="54" rx="13" ry="24" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(45 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(90 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(135 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(180 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(225 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(270 120 88)" />
+        <ellipse cx="120" cy="54" rx="13" ry="24" transform="rotate(315 120 88)" />
+      </g>
+      <!-- Mid ring: 8 petals, medium pink, offset 22.5°, petal-centre at cy=61 (dist=27) -->
+      <g fill="#f472b6">
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(22.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(67.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(112.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(157.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(202.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(247.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(292.5 120 88)" />
+        <ellipse cx="120" cy="61" rx="11" ry="20" transform="rotate(337.5 120 88)" />
+      </g>
+    </g>
+
+    <g class="py-inner">
+      <!-- Inner ring: 8 petals, deep pink, petal-centre at cy=69 (dist=19) -->
+      <g fill="#db2777">
+        <ellipse cx="120" cy="69" rx="9" ry="15" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(45 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(90 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(135 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(180 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(225 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(270 120 88)" />
+        <ellipse cx="120" cy="69" rx="9" ry="15" transform="rotate(315 120 88)" />
+      </g>
+      <!-- Very inner: 6 petals, darkest, petal-centre at cy=75 (dist=13) -->
+      <g fill="#be185d">
+        <ellipse cx="120" cy="75" rx="7" ry="11" />
+        <ellipse cx="120" cy="75" rx="7" ry="11" transform="rotate(60 120 88)" />
+        <ellipse cx="120" cy="75" rx="7" ry="11" transform="rotate(120 120 88)" />
+        <ellipse cx="120" cy="75" rx="7" ry="11" transform="rotate(180 120 88)" />
+        <ellipse cx="120" cy="75" rx="7" ry="11" transform="rotate(240 120 88)" />
+        <ellipse cx="120" cy="75" rx="7" ry="11" transform="rotate(300 120 88)" />
+      </g>
+      <!-- Stamen cluster -->
+      <circle cx="120" cy="88" r="10" fill="#fef08a" />
+      <circle cx="120" cy="88" r="6"  fill="#fde047" />
+      <circle cx="120" cy="88" r="3"  fill="#facc15" />
+    </g>
+  </g>
+</svg>

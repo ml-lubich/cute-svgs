@@ -6,9 +6,10 @@ A small public-ready collection of animated flower SVG cards served by Bun.
 
 - Cherry Blossom Pop
 - Hibiscus Sway
-- Daisy Dance (currently mapped to the Tulip Breeze asset)
+- Daisy Dance
 - Sunflower Smile
 - Rose Bloom
+- Rose Vine Twirl
 
 ## Run Locally
 
@@ -39,8 +40,8 @@ bun run dev
 
 - Sunflower Smile and Hibiscus Sway are considered good/stable.
 - Cherry Blossom Pop was updated to better match the 🌸 emoji shape.
-- Daisy Dance currently presents the tulip artwork by request.
+- Daisy Dance now points to the dedicated daisy asset.
 
 Last remaining visual polish:
 
-- Final micro-alignment of tulip side petal rotation may still need a tiny angle tweak after visual QA.
+- Minor micro-alignment tweaks may still be done after visual QA.

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Poppy Pop</title>
+  <desc id="desc">A bold red poppy with five ruffled petals nodding in the breeze.</desc>
+  <defs>
+    <linearGradient id="ppStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cc66d" />
+      <stop offset="100%" stop-color="#2f8040" />
+    </linearGradient>
+    <radialGradient id="ppPetal" cx="50%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#ff8a50" />
+      <stop offset="100%" stop-color="#c0392b" />
+    </radialGradient>
+    <filter id="ppGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.2" />
+    </filter>
+  </defs>
+  <style>
+    .pp-plant  { transform-origin: 120px 228px; animation: ppSway 4.4s ease-in-out infinite; }
+    .pp-flower { transform-origin: 120px 90px;  animation: ppNod 3.2s ease-in-out infinite; }
+    .pp-petals { transform-origin: 120px 90px;  animation: ppSpin 22s linear infinite; }
+    .pp-halo   { animation: ppHalo 3.2s ease-in-out infinite; }
+
+    @keyframes ppSway  { 0%,100%{ transform: rotate(-2.4deg); } 50%{ transform: rotate(2.8deg); } }
+    @keyframes ppNod   { 0%,100%{ transform: scale(0.97) rotate(0deg); }  50%{ transform: scale(1.04) rotate(-1deg); } }
+    @keyframes ppSpin  { from{ transform: rotate(0deg); } to{ transform: rotate(360deg); } }
+    @keyframes ppHalo  { 0%,100%{ opacity: 0.25; } 50%{ opacity: 0.5; } }
+  </style>
+
+  <ellipse class="pp-halo" cx="120" cy="90" rx="58" ry="50" fill="#fca5a5" filter="url(#ppGlow)" />
+
+  <g class="pp-plant">
+    <path d="M120 228 C110 190, 111 145, 120 112" stroke="url(#ppStem)" stroke-width="7" stroke-linecap="round" fill="none" />
+    <!-- Poppy bud knob (hairy calyx) -->
+    <ellipse cx="120" cy="111" rx="9" ry="6" fill="#6aaa5e" />
+    <!-- Leaves -->
+    <path d="M115 182 C90 171, 83 150, 103 142 C122 134, 131 157, 115 182 Z" fill="#4da45a" />
+    <path d="M124 164 C149 153, 157 131, 140 124 C122 117, 110 140, 124 164 Z" fill="#67be70" />
+
+    <g class="pp-flower">
+      <!-- 5 petals at 72° intervals, centre=(120,90), petal-centre at cy=58 (dist=32) -->
+      <g class="pp-petals" fill="url(#ppPetal)">
+        <ellipse cx="120" cy="58" rx="16" ry="28" />
+        <ellipse cx="120" cy="58" rx="16" ry="28" transform="rotate(72 120 90)" />
+        <ellipse cx="120" cy="58" rx="16" ry="28" transform="rotate(144 120 90)" />
+        <ellipse cx="120" cy="58" rx="16" ry="28" transform="rotate(216 120 90)" />
+        <ellipse cx="120" cy="58" rx="16" ry="28" transform="rotate(288 120 90)" />
+      </g>
+      <!-- Dark seed-head centre -->
+      <circle cx="120" cy="90" r="19" fill="#1c0d00" />
+      <circle cx="120" cy="90" r="12" fill="#2d1a00" />
+      <!-- Stigma disc -->
+      <circle cx="120" cy="90" r="8"  fill="#4a2800" />
+      <!-- Stigma rays (8) -->
+      <g stroke="#fde68a" stroke-width="1.5" stroke-linecap="round">
+        <line x1="120" y1="82" x2="120" y2="79" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(45  120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(90  120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(135 120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(180 120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(225 120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(270 120 90)" />
+        <line x1="120" y1="82" x2="120" y2="79" transform="rotate(315 120 90)" />
+      </g>
+    </g>
+  </g>
+</svg>

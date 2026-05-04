@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Hydrangea Cluster</title>
+  <desc id="desc">A round cluster of soft purple hydrangea florets swaying on a stem.</desc>
+  <defs>
+    <linearGradient id="hyStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cc66d" />
+      <stop offset="100%" stop-color="#2f8040" />
+    </linearGradient>
+    <linearGradient id="hyPetal" x1="90" y1="64" x2="152" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ddd6fe" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <filter id="hyGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" />
+    </filter>
+  </defs>
+  <style>
+    .hy-plant { transform-origin: 120px 228px; animation: hySway 4.8s ease-in-out infinite; }
+    .hy-head  { transform-origin: 120px 92px;  animation: hyPulse 3.2s ease-in-out infinite; }
+    .hy-halo  { animation: hyHalo 3.2s ease-in-out infinite; }
+
+    @keyframes hySway  { 0%,100%{ transform: rotate(-1.8deg); } 50%{ transform: rotate(2.2deg); } }
+    @keyframes hyPulse { 0%,100%{ transform: scale(0.97); } 50%{ transform: scale(1.04); } }
+    @keyframes hyHalo  { 0%,100%{ opacity: 0.22; } 50%{ opacity: 0.48; } }
+  </style>
+
+  <ellipse class="hy-halo" cx="120" cy="92" rx="64" ry="58" fill="#a78bfa" filter="url(#hyGlow)" />
+
+  <g class="hy-plant">
+    <path d="M120 228 C113 193, 114 150, 120 124" stroke="url(#hyStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M116 178 C91 167, 84 147, 103 139 C122 131, 132 153, 116 178 Z" fill="#4da45a" />
+    <path d="M124 161 C149 150, 159 129, 141 122 C123 115, 112 136, 124 161 Z" fill="#67be70" />
+
+    <g class="hy-head">
+      <!-- Floret: center (120, 92) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="120" cy="82" rx="7" ry="10" />
+        <ellipse cx="130" cy="92" rx="10" ry="7" />
+        <ellipse cx="120" cy="102" rx="7" ry="10" />
+        <ellipse cx="110" cy="92" rx="10" ry="7" />
+      </g>
+      <circle cx="120" cy="92" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: top (120, 68) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="120" cy="58" rx="7" ry="10" />
+        <ellipse cx="130" cy="68" rx="10" ry="7" />
+        <ellipse cx="120" cy="78" rx="7" ry="10" />
+        <ellipse cx="110" cy="68" rx="10" ry="7" />
+      </g>
+      <circle cx="120" cy="68" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: top-right (141, 80) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="141" cy="70" rx="7" ry="10" />
+        <ellipse cx="151" cy="80" rx="10" ry="7" />
+        <ellipse cx="141" cy="90" rx="7" ry="10" />
+        <ellipse cx="131" cy="80" rx="10" ry="7" />
+      </g>
+      <circle cx="141" cy="80" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: bottom-right (141, 104) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="141" cy="94" rx="7" ry="10" />
+        <ellipse cx="151" cy="104" rx="10" ry="7" />
+        <ellipse cx="141" cy="114" rx="7" ry="10" />
+        <ellipse cx="131" cy="104" rx="10" ry="7" />
+      </g>
+      <circle cx="141" cy="104" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: bottom (120, 116) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="120" cy="106" rx="7" ry="10" />
+        <ellipse cx="130" cy="116" rx="10" ry="7" />
+        <ellipse cx="120" cy="126" rx="7" ry="10" />
+        <ellipse cx="110" cy="116" rx="10" ry="7" />
+      </g>
+      <circle cx="120" cy="116" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: bottom-left (99, 104) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="99" cy="94" rx="7" ry="10" />
+        <ellipse cx="109" cy="104" rx="10" ry="7" />
+        <ellipse cx="99" cy="114" rx="7" ry="10" />
+        <ellipse cx="89" cy="104" rx="10" ry="7" />
+      </g>
+      <circle cx="99" cy="104" r="4.5" fill="#ede9fe" />
+
+      <!-- Floret: top-left (99, 80) -->
+      <g fill="url(#hyPetal)">
+        <ellipse cx="99" cy="70" rx="7" ry="10" />
+        <ellipse cx="109" cy="80" rx="10" ry="7" />
+        <ellipse cx="99" cy="90" rx="7" ry="10" />
+        <ellipse cx="89" cy="80" rx="10" ry="7" />
+      </g>
+      <circle cx="99" cy="80" r="4.5" fill="#ede9fe" />
+    </g>
+  </g>
+</svg>

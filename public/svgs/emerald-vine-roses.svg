@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="Animated green vine with blooming roses">
+  <defs>
+    <linearGradient id="bg-wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2fff4"/>
+      <stop offset="100%" stop-color="#e4fff0"/>
+    </linearGradient>
+    <linearGradient id="vine-main" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#74d36f"/>
+      <stop offset="100%" stop-color="#1f7a3a"/>
+    </linearGradient>
+    <linearGradient id="vine-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b9f4a"/>
+      <stop offset="100%" stop-color="#1a5f30"/>
+    </linearGradient>
+    <radialGradient id="rose-outer" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffafcd"/>
+      <stop offset="100%" stop-color="#d83f7d"/>
+    </radialGradient>
+    <radialGradient id="rose-inner" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffe6f1"/>
+      <stop offset="100%" stop-color="#ff7cb0"/>
+    </radialGradient>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .vine-wrap {
+      transform-origin: 160px 248px;
+      animation: vineSway 6.8s ease-in-out infinite;
+    }
+
+    .leaf {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: leafFlutter 4.6s ease-in-out infinite;
+    }
+
+    .leaf.alt {
+      animation-delay: -1.6s;
+    }
+
+    .rose {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: roseBloom 3.6s ease-in-out infinite;
+    }
+
+    .rose.slow {
+      animation-duration: 4.8s;
+      animation-delay: -1.2s;
+    }
+
+    .spark {
+      animation: sparkleLift 2.9s ease-in-out infinite;
+    }
+
+    .spark.alt {
+      animation-delay: -1.3s;
+    }
+
+    @keyframes vineSway {
+      0%,
+      100% {
+        transform: rotate(-2deg) translateX(-1px);
+      }
+      50% {
+        transform: rotate(2deg) translateX(2px);
+      }
+    }
+
+    @keyframes leafFlutter {
+      0%,
+      100% {
+        transform: rotate(-5deg) scale(0.97);
+      }
+      50% {
+        transform: rotate(5deg) scale(1.06);
+      }
+    }
+
+    @keyframes roseBloom {
+      0%,
+      100% {
+        transform: scale(0.94);
+      }
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes sparkleLift {
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: 0.9;
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+
+  <rect width="320" height="260" fill="url(#bg-wash)"/>
+  <ellipse cx="160" cy="244" rx="128" ry="16" fill="#a8d5aa" opacity="0.65"/>
+  <ellipse cx="160" cy="246" rx="110" ry="10" fill="#7abf89" opacity="0.5"/>
+
+  <g class="spark">
+    <circle cx="70" cy="56" r="4" fill="#ffe8f3" filter="url(#soft-glow)"/>
+  </g>
+  <g class="spark alt">
+    <circle cx="264" cy="42" r="5" fill="#fff7d8" filter="url(#soft-glow)"/>
+  </g>
+
+  <g class="vine-wrap">
+    <path d="M162 242 C149 210, 144 176, 161 149 C178 122, 206 106, 204 78 C202 55, 181 42, 168 24"
+      fill="none" stroke="url(#vine-main)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M160 242 C172 212, 181 183, 168 157 C154 130, 124 110, 122 82 C120 58, 141 43, 155 26"
+      fill="none" stroke="url(#vine-shadow)" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+
+    <path class="leaf" d="M193 142 C219 129, 236 134, 238 150 C240 168, 219 177, 194 165 C186 158, 186 149, 193 142 Z"
+      fill="#5dc36b"/>
+    <path class="leaf alt" d="M133 123 C106 113, 87 120, 84 138 C81 155, 102 166, 128 155 C136 149, 138 132, 133 123 Z"
+      fill="#6ecf78"/>
+    <path class="leaf" d="M172 90 C197 80, 214 85, 216 100 C218 116, 199 124, 174 115 C167 108, 166 97, 172 90 Z"
+      fill="#79d881"/>
+    <path class="leaf alt" d="M149 69 C123 59, 106 66, 103 81 C100 96, 121 107, 146 98 C154 92, 156 77, 149 69 Z"
+      fill="#67c975"/>
+
+    <!-- Branch stub from main vine to rose 1 -->
+    <path d="M184 120 C193 116, 200 116, 204 121" fill="none" stroke="#4cb358" stroke-width="4" stroke-linecap="round"/>
+    <g class="rose" transform="translate(204 121)">
+      <circle r="18" fill="url(#rose-outer)"/>
+      <ellipse cx="0" cy="-6" rx="8" ry="12" fill="url(#rose-inner)"/>
+      <ellipse cx="-5" cy="-2" rx="8" ry="12" fill="url(#rose-inner)" transform="rotate(-34)"/>
+      <ellipse cx="5" cy="-2" rx="8" ry="12" fill="url(#rose-inner)" transform="rotate(34)"/>
+      <circle r="5" fill="#fff4fa"/>
+    </g>
+
+    <!-- Branch stub from shadow vine to rose 2 -->
+    <path d="M133 108 C131 106, 130 104, 128 102" fill="none" stroke="#4cb358" stroke-width="3" stroke-linecap="round"/>
+    <g class="rose slow" transform="translate(128 102)">
+      <circle r="16" fill="url(#rose-outer)"/>
+      <ellipse cx="0" cy="-5" rx="7" ry="10" fill="url(#rose-inner)"/>
+      <ellipse cx="-4" cy="-2" rx="7" ry="10" fill="url(#rose-inner)" transform="rotate(-30)"/>
+      <ellipse cx="4" cy="-2" rx="7" ry="10" fill="url(#rose-inner)" transform="rotate(30)"/>
+      <circle r="4" fill="#fff4fa"/>
+    </g>
+
+    <!-- Branch stub from main vine to rose 3 (moved onto vine) -->
+    <path d="M188 47 C181 46, 174 47, 163 50" fill="none" stroke="#4cb358" stroke-width="3" stroke-linecap="round"/>
+    <g class="rose" transform="translate(163 50)">
+      <circle r="14" fill="url(#rose-outer)"/>
+      <ellipse cx="0" cy="-4" rx="6" ry="8" fill="url(#rose-inner)"/>
+      <ellipse cx="-3.5" cy="-1.5" rx="6" ry="8" fill="url(#rose-inner)" transform="rotate(-32)"/>
+      <ellipse cx="3.5" cy="-1.5" rx="6" ry="8" fill="url(#rose-inner)" transform="rotate(32)"/>
+      <circle r="3.5" fill="#fff4fa"/>
+    </g>
+  </g>
+</svg>

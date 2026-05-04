@@ -33,20 +33,20 @@
 
     @keyframes waveLeft {
       0%,
-      100% { transform: rotate(-4deg); }
-      50% { transform: rotate(2deg); }
+      100% { transform: rotate(14deg) scale(0.97); }
+      50% { transform: rotate(23deg) scale(1.04); }
     }
 
     @keyframes waveRight {
       0%,
-      100% { transform: rotate(3deg); }
-      50% { transform: rotate(-2deg); }
+      100% { transform: rotate(-14deg) scale(0.97); }
+      50% { transform: rotate(-23deg) scale(1.04); }
     }
 
     @keyframes floatLeaf {
       0%,
-      100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-7px) rotate(4deg); }
     }
 
     @keyframes auraPulse {

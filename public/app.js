@@ -69,8 +69,8 @@ function buildRose(token) {
   <ellipse class="spark" cx="120" cy="82" rx="56" ry="30" fill="${glow}" filter="url(#glow-${token})"/>
   <g class="stem">
     <path d="M120 224 C110 175,112 126,120 84" stroke="url(#stem-${token})" stroke-width="8" stroke-linecap="round" fill="none"/>
-    <path d="M114 161 C91 149, 90 130, 112 126 C126 124,131 138,114 161" fill="#499a4b"/>
-    <path d="M126 141 C149 129,153 110,132 105 C117 102,110 118,126 141" fill="#54aa55"/>
+    <path d="M114 161 C91 149, 90 130, 112 126 C126 124,131 138,114 161" fill="#499a4b" transform="rotate(0 112 143)"/>
+    <path d="M126 141 C149 129,153 110,132 105 C117 102,110 118,126 141" fill="#54aa55" transform="rotate(0 128 123)"/>
     <ellipse cx="120" cy="230" rx="43" ry="12" fill="#977051"/>
   </g>
   <g class="flower">
@@ -103,8 +103,8 @@ function buildFlower() {
   <g class="stem">
     <path d="M120 224 C110 183, 114 132, 120 95" stroke="${stem}" stroke-width="8" stroke-linecap="round" fill="none"/>
     <ellipse cx="120" cy="230" rx="43" ry="12" fill="#987151"/>
-    <path d="M115 160 C90 146, 91 130, 112 128 C126 126,132 143,115 160" fill="#64b466"/>
-    <path d="M126 143 C149 133, 154 116, 134 111 C119 107,111 123,126 143" fill="#72be72"/>
+    <path d="M115 160 C90 146, 91 130, 112 128 C126 126,132 143,115 160" fill="#64b466" transform="rotate(0 113 144)"/>
+    <path d="M126 143 C149 133, 154 116, 134 111 C119 107,111 123,126 143" fill="#72be72" transform="rotate(0 129 127)"/>
     <g class="bloom">
       <ellipse cx="120" cy="92" rx="10" ry="31" fill="${petal}"/>
       <ellipse cx="120" cy="92" rx="10" ry="31" fill="${petal}" transform="rotate(45 120 92)"/>
@@ -178,8 +178,8 @@ function buildFarm() {
   <path d="M0 198 C35 185, 80 188, 120 198 C157 207, 201 206, 240 194 L240 260 L0 260 Z" fill="#8cc879"/>
   <g class="sprout">
     <path d="M120 188 L120 142" stroke="#3f8f4f" stroke-width="7" stroke-linecap="round"/>
-    <path d="M120 153 C99 138, 95 117, 113 110 C130 103, 138 125, 120 153 Z" fill="${sprout}"/>
-    <path d="M120 165 C142 151, 146 130, 128 123 C111 116, 103 137, 120 165 Z" fill="#66c676"/>
+    <path d="M120 153 C99 138, 95 117, 113 110 C130 103, 138 125, 120 153 Z" fill="${sprout}" transform="rotate(0 116 132)"/>
+    <path d="M120 165 C142 151, 146 130, 128 123 C111 116, 103 137, 120 165 Z" fill="#66c676" transform="rotate(0 124 144)"/>
     <ellipse cx="120" cy="195" rx="24" ry="8" fill="#996f49"/>
   </g>
 </svg>`

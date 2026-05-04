@@ -17,17 +17,27 @@
     }
 
     .petals {
-      transform-origin: 120px 120px;
+      transform-origin: 120px 90px;
       animation: ddSpin 12s linear infinite;
     }
 
     .core {
-      transform-origin: 120px 120px;
+      transform-origin: 120px 90px;
       animation: ddBounce 2.7s ease-in-out infinite;
     }
 
     .halo {
       animation: ddHalo 3.1s ease-in-out infinite;
+    }
+
+    .dd-leaf {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: ddLeafFlutter 4.1s ease-in-out infinite;
+    }
+
+    .dd-leaf.alt {
+      animation-delay: -2.05s;
     }
 
     @keyframes ddSpin {
@@ -52,29 +62,34 @@
       100% { transform: rotate(-2deg); }
       50% { transform: rotate(2deg); }
     }
+
+    @keyframes ddLeafFlutter {
+      0%, 100% { transform: rotate(-6deg) scale(0.97); }
+      50% { transform: rotate(6deg) scale(1.05); }
+    }
   </style>
 
-  <ellipse class="halo" cx="120" cy="120" rx="66" ry="52" fill="#f5f3cf" filter="url(#ddGlow)" />
+  <ellipse class="halo" cx="120" cy="90" rx="66" ry="52" fill="#f5f3cf" filter="url(#ddGlow)" />
 
   <g class="stem-group">
-    <path d="M120 228 C112 189, 114 154, 120 133" stroke="url(#ddStem)" stroke-width="8" stroke-linecap="round" fill="none" />
-    <path d="M116 179 C91 168, 84 147, 103 138 C122 130, 133 152, 116 179 Z" fill="#4da45a" />
-    <path d="M124 164 C149 152, 159 131, 141 123 C123 116, 112 137, 124 164 Z" fill="#67be70" />
+    <path d="M120 228 C112 189, 114 154, 120 103" stroke="url(#ddStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path class="dd-leaf" d="M116 179 C91 168, 84 147, 103 138 C122 130, 133 152, 116 179 Z" fill="#4da45a" transform="rotate(0 110 159)" />
+    <path class="dd-leaf alt" d="M124 164 C149 152, 159 131, 141 123 C123 116, 112 137, 124 164 Z" fill="#67be70" transform="rotate(0 128 144)" />
   </g>
 
   <g class="petals" fill="#fffef9">
-    <ellipse cx="120" cy="76" rx="13" ry="30" />
-    <ellipse cx="120" cy="164" rx="13" ry="30" />
-    <ellipse cx="76" cy="120" rx="30" ry="13" />
-    <ellipse cx="164" cy="120" rx="30" ry="13" />
-    <ellipse cx="89" cy="89" rx="12" ry="25" transform="rotate(-45 89 89)" />
-    <ellipse cx="151" cy="89" rx="12" ry="25" transform="rotate(45 151 89)" />
-    <ellipse cx="89" cy="151" rx="12" ry="25" transform="rotate(45 89 151)" />
-    <ellipse cx="151" cy="151" rx="12" ry="25" transform="rotate(-45 151 151)" />
+    <ellipse cx="120" cy="46" rx="13" ry="30" />
+    <ellipse cx="120" cy="134" rx="13" ry="30" />
+    <ellipse cx="76" cy="90" rx="30" ry="13" />
+    <ellipse cx="164" cy="90" rx="30" ry="13" />
+    <ellipse cx="89" cy="59" rx="12" ry="25" transform="rotate(-45 89 59)" />
+    <ellipse cx="151" cy="59" rx="12" ry="25" transform="rotate(45 151 59)" />
+    <ellipse cx="89" cy="121" rx="12" ry="25" transform="rotate(45 89 121)" />
+    <ellipse cx="151" cy="121" rx="12" ry="25" transform="rotate(-45 151 121)" />
   </g>
 
   <g class="core">
-    <circle cx="120" cy="120" r="20" fill="#ffc94f" />
-    <circle cx="120" cy="120" r="8" fill="#f5a93e" />
+    <circle cx="120" cy="90" r="20" fill="#ffc94f" />
+    <circle cx="120" cy="90" r="8" fill="#f5a93e" />
   </g>
 </svg>

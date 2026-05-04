@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Lily Belle</title>
+  <desc id="desc">An elegant white lily with golden stamens swaying on a tall stem.</desc>
+  <defs>
+    <linearGradient id="lyStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6cc66d" />
+      <stop offset="100%" stop-color="#2f8040" />
+    </linearGradient>
+    <linearGradient id="lyPetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffef9" />
+      <stop offset="100%" stop-color="#ecf9eb" />
+    </linearGradient>
+    <filter id="lyGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.2" />
+    </filter>
+  </defs>
+  <style>
+    .ly-plant  { transform-origin: 120px 228px; animation: lySway 4.8s ease-in-out infinite; }
+    .ly-flower { transform-origin: 120px 88px;  animation: lyNod 3.6s ease-in-out infinite; }
+    .ly-halo   { animation: lyHalo 3.6s ease-in-out infinite; }
+
+    @keyframes lySway  { 0%,100%{ transform: rotate(-1.6deg); } 50%{ transform: rotate(2.2deg); } }
+    @keyframes lyNod   { 0%,100%{ transform: scale(0.98) rotate(0deg); }  50%{ transform: scale(1.03) rotate(-1deg); } }
+    @keyframes lyHalo  { 0%,100%{ opacity: 0.2; } 50%{ opacity: 0.45; } }
+  </style>
+
+  <ellipse class="ly-halo" cx="120" cy="88" rx="60" ry="52" fill="#d1fae5" filter="url(#lyGlow)" />
+
+  <g class="ly-plant">
+    <!-- Tall elegant stem -->
+    <path d="M120 228 C111 188, 112 140, 120 108" stroke="url(#lyStem)" stroke-width="7" stroke-linecap="round" fill="none" />
+    <!-- Long lance-shaped leaves (lily style) -->
+    <path d="M114 190 C86 182, 76 161, 94 152 C110 144, 120 162, 114 190 Z" fill="#4da45a" />
+    <path d="M126 173 C154 165, 164 143, 147 134 C130 126, 119 145, 126 173 Z" fill="#67be70" />
+    <path d="M116 148 C93 140, 86 122, 104 115 C119 109, 126 127, 116 148 Z" fill="#5ab858" opacity="0.9" />
+
+    <g class="ly-flower">
+      <!-- Outer 3 petals (at 0°, 120°, 240°): centre at cy=60, dist=28, rx=14 ry=26 -->
+      <g fill="url(#lyPetal)">
+        <ellipse cx="120" cy="60" rx="14" ry="26" />
+        <ellipse cx="120" cy="60" rx="14" ry="26" transform="rotate(120 120 88)" />
+        <ellipse cx="120" cy="60" rx="14" ry="26" transform="rotate(240 120 88)" />
+      </g>
+      <!-- Green centre vein on each outer petal -->
+      <g stroke="#a7f3d0" stroke-width="2" stroke-linecap="round" opacity="0.72" fill="none">
+        <line x1="120" y1="63" x2="120" y2="86" />
+        <line x1="120" y1="63" x2="120" y2="86" transform="rotate(120 120 88)" />
+        <line x1="120" y1="63" x2="120" y2="86" transform="rotate(240 120 88)" />
+      </g>
+      <!-- Inner 3 petals (at 60°, 180°, 300°): slightly narrower -->
+      <g fill="url(#lyPetal)">
+        <ellipse cx="120" cy="60" rx="12" ry="26" transform="rotate(60 120 88)" />
+        <ellipse cx="120" cy="60" rx="12" ry="26" transform="rotate(180 120 88)" />
+        <ellipse cx="120" cy="60" rx="12" ry="26" transform="rotate(300 120 88)" />
+      </g>
+      <!-- Green vein on inner petals -->
+      <g stroke="#a7f3d0" stroke-width="1.5" stroke-linecap="round" opacity="0.65" fill="none">
+        <line x1="120" y1="63" x2="120" y2="86" transform="rotate(60 120 88)" />
+        <line x1="120" y1="63" x2="120" y2="86" transform="rotate(180 120 88)" />
+        <line x1="120" y1="63" x2="120" y2="86" transform="rotate(300 120 88)" />
+      </g>
+      <!-- Stamens: 6 filaments at 30° intervals from centre to petal zone -->
+      <g stroke="#b45309" stroke-width="1.6" stroke-linecap="round" fill="none">
+        <line x1="120" y1="88" x2="120" y2="71" />
+        <line x1="120" y1="88" x2="120" y2="71" transform="rotate(60  120 88)" />
+        <line x1="120" y1="88" x2="120" y2="71" transform="rotate(120 120 88)" />
+        <line x1="120" y1="88" x2="120" y2="71" transform="rotate(180 120 88)" />
+        <line x1="120" y1="88" x2="120" y2="71" transform="rotate(240 120 88)" />
+        <line x1="120" y1="88" x2="120" y2="71" transform="rotate(300 120 88)" />
+      </g>
+      <!-- Anther blobs at stamen tips -->
+      <g fill="#d97706">
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" />
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" transform="rotate(60  120 88)" />
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" transform="rotate(120 120 88)" />
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" transform="rotate(180 120 88)" />
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" transform="rotate(240 120 88)" />
+        <ellipse cx="120" cy="69" rx="3.5" ry="2.2" transform="rotate(300 120 88)" />
+      </g>
+      <!-- Pistil -->
+      <circle cx="120" cy="88" r="5.5" fill="#6ee7b7" />
+      <circle cx="120" cy="88" r="3"   fill="#34d399" />
+    </g>
+  </g>
+</svg>

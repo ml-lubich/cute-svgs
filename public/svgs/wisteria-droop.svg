@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Wisteria Droop</title>
+  <desc id="desc">A climbing wisteria vine with three drooping purple flower clusters.</desc>
+  <defs>
+    <linearGradient id="wsStem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8aab6e" />
+      <stop offset="100%" stop-color="#4a7340" />
+    </linearGradient>
+    <linearGradient id="wsBranch" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b7355" />
+      <stop offset="100%" stop-color="#6b5a3e" />
+    </linearGradient>
+  </defs>
+  <style>
+    .ws-plant   { transform-origin: 120px 228px; animation: wsSway 5.2s ease-in-out infinite; }
+    .ws-clusterA { transform-origin: 78px 74px;  animation: wsDroop 3.8s ease-in-out infinite; }
+    .ws-clusterB { transform-origin: 120px 76px; animation: wsDroop 4.4s 0.4s ease-in-out infinite; }
+    .ws-clusterC { transform-origin: 162px 74px; animation: wsDroop 3.6s 0.8s ease-in-out infinite; }
+
+    @keyframes wsSway  { 0%,100%{ transform: rotate(-1.4deg); } 50%{ transform: rotate(1.8deg); } }
+    @keyframes wsDroop { 0%,100%{ transform: translateY(0px); } 50%{ transform: translateY(5px); } }
+  </style>
+
+  <g class="ws-plant">
+    <!-- Main climbing stem -->
+    <path d="M120 228 C112 185, 111 132, 118 70" stroke="url(#wsStem)" stroke-width="8" stroke-linecap="round" fill="none" />
+    <!-- Stem leaves -->
+    <path d="M115 196 C93 186, 87 166, 103 159 C116 153, 121 169, 115 196 Z" fill="#5aaa54" />
+    <path d="M120 176 C141 166, 148 148, 134 142 C121 138, 115 153, 120 176 Z" fill="#70c264" />
+    <path d="M115 148 C97 140, 91 122, 106 116 C119 111, 124 127, 115 148 Z" fill="#5aaa54" opacity="0.88" />
+
+    <!-- Horizontal branch arms at top -->
+    <path d="M118 70 C108 66, 94 66, 78 70"  stroke="url(#wsBranch)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M118 70 C128 66, 144 67, 162 70" stroke="url(#wsBranch)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <!-- Branch leaves -->
+    <ellipse cx="92" cy="63" rx="10" ry="6" fill="#6ab45a" transform="rotate(-15 92 63)" />
+    <ellipse cx="148" cy="63" rx="10" ry="6" fill="#6ab45a" transform="rotate(15 148 63)" />
+    <ellipse cx="120" cy="60" rx="10" ry="6" fill="#78c06a" />
+
+    <!-- Cluster A (left, x=78) — raceme stem + florets -->
+    <g class="ws-clusterA">
+      <path d="M78 72 L78 76" stroke="#7a9a62" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- row y=80: 3 florets -->
+      <ellipse cx="66" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="78" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="90" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <!-- row y=94 -->
+      <ellipse cx="66" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="78" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="90" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=108: 2 florets -->
+      <ellipse cx="72" cy="108" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="84" cy="108" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=122 -->
+      <ellipse cx="72" cy="122" rx="6" ry="8" fill="#a855f7" />
+      <ellipse cx="84" cy="122" rx="6" ry="8" fill="#a855f7" />
+      <!-- row y=136: 1 floret -->
+      <ellipse cx="78" cy="136" rx="6" ry="8" fill="#7e22ce" />
+      <!-- tip -->
+      <ellipse cx="78" cy="149" rx="5" ry="6" fill="#6b21a8" />
+    </g>
+
+    <!-- Cluster B (centre, x=120) — tallest -->
+    <g class="ws-clusterB">
+      <path d="M120 74 L120 78" stroke="#7a9a62" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- row y=82: 4 florets -->
+      <ellipse cx="102" cy="82" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="114" cy="82" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="126" cy="82" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="138" cy="82" rx="6" ry="8" fill="#e9d5ff" />
+      <!-- row y=96 -->
+      <ellipse cx="102" cy="96" rx="6" ry="8" fill="#ddd6fe" />
+      <ellipse cx="114" cy="96" rx="6" ry="8" fill="#ddd6fe" />
+      <ellipse cx="126" cy="96" rx="6" ry="8" fill="#ddd6fe" />
+      <ellipse cx="138" cy="96" rx="6" ry="8" fill="#ddd6fe" />
+      <!-- row y=110: 3 florets -->
+      <ellipse cx="108" cy="110" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="120" cy="110" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="132" cy="110" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=124 -->
+      <ellipse cx="108" cy="124" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="120" cy="124" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="132" cy="124" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=138: 2 florets -->
+      <ellipse cx="114" cy="138" rx="6" ry="8" fill="#a855f7" />
+      <ellipse cx="126" cy="138" rx="6" ry="8" fill="#a855f7" />
+      <!-- row y=152 -->
+      <ellipse cx="114" cy="152" rx="6" ry="8" fill="#9333ea" />
+      <ellipse cx="126" cy="152" rx="6" ry="8" fill="#9333ea" />
+      <!-- row y=166: 1 floret -->
+      <ellipse cx="120" cy="166" rx="6" ry="8" fill="#7e22ce" />
+      <!-- tip -->
+      <ellipse cx="120" cy="179" rx="5" ry="6" fill="#6b21a8" />
+    </g>
+
+    <!-- Cluster C (right, x=162) -->
+    <g class="ws-clusterC">
+      <path d="M162 72 L162 76" stroke="#7a9a62" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- row y=80: 3 florets -->
+      <ellipse cx="150" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="162" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <ellipse cx="174" cy="80" rx="6" ry="8" fill="#e9d5ff" />
+      <!-- row y=94 -->
+      <ellipse cx="150" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="162" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="174" cy="94" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=108: 2 florets -->
+      <ellipse cx="156" cy="108" rx="6" ry="8" fill="#c084fc" />
+      <ellipse cx="168" cy="108" rx="6" ry="8" fill="#c084fc" />
+      <!-- row y=122 -->
+      <ellipse cx="156" cy="122" rx="6" ry="8" fill="#a855f7" />
+      <ellipse cx="168" cy="122" rx="6" ry="8" fill="#a855f7" />
+      <!-- row y=136: 1 floret -->
+      <ellipse cx="162" cy="136" rx="6" ry="8" fill="#7e22ce" />
+      <!-- tip -->
+      <ellipse cx="162" cy="149" rx="5" ry="6" fill="#6b21a8" />
+    </g>
+  </g>
+</svg>

@@ -39,6 +39,16 @@
       animation: tulipBreathRight 3.2s ease-in-out infinite;
     }
 
+    .t-leaf {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: tulipLeafFlutter 4.4s ease-in-out infinite;
+    }
+
+    .t-leaf.alt {
+      animation-delay: -2.2s;
+    }
+
     @keyframes tulipSway {
       0%,
       100% { transform: rotate(2.2deg); }
@@ -62,12 +72,17 @@
       100% { transform: rotate(7deg) scale(0.99); }
       50% { transform: rotate(9deg) scale(1.03); }
     }
+
+    @keyframes tulipLeafFlutter {
+      0%, 100% { transform: rotate(-6deg) scale(0.97); }
+      50% { transform: rotate(6deg) scale(1.05); }
+    }
   </style>
 
   <g class="plant">
     <path d="M120 226 C111 190, 112 144, 121 107" stroke="url(#tStem)" stroke-width="8" stroke-linecap="round" fill="none" />
-    <path d="M116 171 C92 160, 85 139, 103 131 C123 123, 133 145, 116 171 Z" fill="#56ae5b" />
-    <path d="M124 155 C149 143, 159 121, 140 114 C122 106, 110 129, 124 155 Z" fill="#70c871" />
+    <path class="t-leaf" d="M116 171 C92 160, 85 139, 103 131 C123 123, 133 145, 116 171 Z" fill="#56ae5b" transform="rotate(0 110 151)" />
+    <path class="t-leaf alt" d="M124 155 C149 143, 159 121, 140 114 C122 106, 110 129, 124 155 Z" fill="#70c871" transform="rotate(0 127 136)" />
 
     <g class="bud">
       <path class="petal-left" d="M120 118 C104 116, 91 101, 95 82 C107 79, 117 88, 120 103 Z" fill="url(#tPetal)" />
