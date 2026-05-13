@@ -42,6 +42,7 @@ flowchart LR
 - [Project structure](#project-structure)
 - [Known status](#known-status)
 - [🗺️ Repository map](#️-repository-map)
+- [📊 Code composition](#-code-composition)
 
 ## Download flow (sequence)
 
@@ -186,4 +187,20 @@ mindmap
     files
       README.md
       package.json
+```
+
+
+## 📊 Code composition
+
+File-type breakdown of source under this repo (skips `.git`, `node_modules`, build caches, lockfiles).
+
+```mermaid
+pie showData title File-type composition of cute-svgs (40 files)
+    "SVG image" : 30
+    "TypeScript" : 3
+    "Markdown" : 3
+    "HTML" : 1
+    "CSS" : 1
+    "JavaScript" : 1
+    "JSON" : 1
 ```
