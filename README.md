@@ -6,6 +6,41 @@ Each flower card includes a package download. The zip contains `index.html`,
 `flower.svg`, and `README.txt`, so recipients can unzip it and open the HTML
 file directly in a browser.
 
+```mermaid
+flowchart LR
+    USER(("👤<br/>Visitor"))
+    SERVER{{"🌐 server.ts<br/>Bun static server<br/>:3000"}}
+    HTML[/"📄 public/index.html<br/>card gallery"/]
+    CSS[/"🎨 public/styles.css"/]
+    SVGS[("🌸 public/svgs/*.svg<br/>30 animated flowers")]
+    PKG["📦 src/packages.ts<br/>per-flower .zip<br/>(index.html + svg + readme.txt)"]
+    DL[/"⬇ Browser download<br/>flower.zip"/]
+
+    USER --> SERVER
+    SERVER --> HTML
+    HTML --> CSS
+    HTML --> SVGS
+    USER -- "click ⬇" --> PKG
+    PKG --> DL
+
+    classDef io fill:#0e1116,stroke:#2f81f7,stroke-width:1.5px,color:#e6edf3;
+    classDef brain fill:#161b22,stroke:#d29922,stroke-width:1.5px,color:#e6edf3;
+    classDef tool fill:#161b22,stroke:#3fb950,stroke-width:1.5px,color:#e6edf3;
+    classDef out fill:#0e1116,stroke:#a371f7,stroke-width:1.5px,color:#e6edf3;
+    class USER,SVGS io;
+    class SERVER brain;
+    class HTML,CSS,PKG tool;
+    class DL out;
+```
+
+## Table of contents
+
+- [Included flowers](#included-flowers)
+- [Run locally](#run-locally)
+- [Architecture at a glance](#architecture-at-a-glance)
+- [Project structure](#project-structure)
+- [Known status](#known-status)
+
 ## Included Flowers
 
 - Cherry Blossom Pop
@@ -59,6 +94,30 @@ For auto-reload while editing:
 
 ```bash
 bun run dev
+```
+
+## Architecture at a glance
+
+```mermaid
+flowchart TB
+    subgraph SRV["🌐 Server"]
+        S["server.ts<br/>Bun.serve()"]
+    end
+    subgraph STATIC["📁 public/"]
+        H["index.html · gallery markup"]
+        C["styles.css · grid + cards"]
+        J["app.js · download wiring"]
+        SV[("svgs/*.svg<br/>30 flowers")]
+    end
+    subgraph PKG["📦 Packaging"]
+        P["src/packages.ts<br/>build flower.zip in browser"]
+    end
+    S --> H
+    S --> C
+    S --> J
+    S --> SV
+    J --> P
+    P --> SV
 ```
 
 ## Project Structure
