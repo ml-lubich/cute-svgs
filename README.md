@@ -38,8 +38,31 @@ flowchart LR
 - [Included flowers](#included-flowers)
 - [Run locally](#run-locally)
 - [Architecture at a glance](#architecture-at-a-glance)
+- [Download flow (sequence)](#download-flow-sequence)
 - [Project structure](#project-structure)
 - [Known status](#known-status)
+
+## Download flow (sequence)
+
+```mermaid
+sequenceDiagram
+    participant V as visitor
+    participant SRV as server.ts (Bun)
+    participant H as public/index.html
+    participant J as public/app.js
+    participant SVG as public/svgs/*.svg
+    participant PKG as src/packages.ts
+
+    V->>SRV: GET /
+    SRV-->>V: index.html + styles + svgs
+    V->>H: scroll gallery
+    V->>J: click "download" on a flower
+    J->>SVG: fetch flower.svg
+    SVG-->>J: svg bytes
+    J->>PKG: build zip(svg, index.html, README.txt)
+    PKG-->>J: Blob
+    J-->>V: trigger flower.zip download
+```
 
 ## Included Flowers
 
