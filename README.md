@@ -41,6 +41,7 @@ flowchart LR
 - [Download flow (sequence)](#download-flow-sequence)
 - [Project structure](#project-structure)
 - [Known status](#known-status)
+- [🗺️ Repository map](#️-repository-map)
 
 ## Download flow (sequence)
 
@@ -161,3 +162,28 @@ flowchart TB
 Last remaining visual polish:
 
 - Minor micro-alignment tweaks may still be done after visual QA.
+
+
+## 🗺️ Repository map
+
+Top-level layout of `cute-svgs` rendered as a Mermaid mindmap (auto-generated from the on-disk tree).
+
+```mermaid
+mindmap
+  root((cute-svgs))
+    docs/
+      FLOWERS.md
+      TESTING.md
+    public/
+      app.js
+      index.html
+      styles.css
+      svgs
+    src/
+      packages.ts
+    tests/
+      svg-assets.test.ts
+    files
+      README.md
+      package.json
+```
